@@ -7,7 +7,8 @@
 //
 
 #import "CCNode.h"
+#import "Scene.h"
 
-@interface HowToPlayScene : CCNode
+@interface HowToPlayScene : Scene
 
 @end

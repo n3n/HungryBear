@@ -7,7 +7,8 @@
 //
 
 #import "CCNode.h"
+#import "Scene.h"
 
-@interface HighscoreScene : CCNode
+@interface HighscoreScene : Scene
 
 @end

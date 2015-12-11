@@ -7,7 +7,8 @@
 //
 
 #import "CCNode.h"
+#import "Scene.h"
 
-@interface CategoriesScene : CCNode
+@interface CategoriesScene : Scene
 
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "CCNode.h"
+#import "Scene.h"
 
+@interface StampbookScene : Scene
 
-@interface StampbookScene : CCNode
 
 @end

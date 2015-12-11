@@ -1,3 +1,5 @@
-@interface MainScene : CCNode
+#import "Scene.h"
+
+@interface MainScene : Scene
 
 @end
