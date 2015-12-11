@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072174F01C1B1709008086C5 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 072174EF1C1B1709008086C5 /* Scene.m */; settings = {ASSET_TAGS = (); }; };
 		079D1BF51C1A9B980003575A /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BF41C1A9B980003575A /* SceneManager.m */; };
 		079D1BFC1C1A9E370003575A /* HowToPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFB1C1A9E370003575A /* HowToPlayScene.m */; };
 		079D1BFF1C1AA2470003575A /* HighscoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFE1C1AA2470003575A /* HighscoreScene.m */; };
@@ -157,6 +158,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072174EE1C1B1709008086C5 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
+		072174EF1C1B1709008086C5 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
 		079D1BF31C1A9B980003575A /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		079D1BF41C1A9B980003575A /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneManager.m; sourceTree = "<group>"; };
 		079D1BFA1C1A9E370003575A /* HowToPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPlayScene.h; sourceTree = "<group>"; };
@@ -297,6 +300,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		072174EB1C1B15CA008086C5 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				079D1BF31C1A9B980003575A /* SceneManager.h */,
+				079D1BF41C1A9B980003575A /* SceneManager.m */,
+				079D1C061C1AA5630003575A /* GameplayScene.h */,
+				079D1C071C1AA5630003575A /* GameplayScene.m */,
+				079D1BFA1C1A9E370003575A /* HowToPlayScene.h */,
+				079D1BFB1C1A9E370003575A /* HowToPlayScene.m */,
+				079D1C091C1ABC820003575A /* ModeScene.h */,
+				079D1C0A1C1ABC820003575A /* ModeScene.m */,
+				079D1C0C1C1ABDE90003575A /* CategoriesScene.h */,
+				079D1C0D1C1ABDE90003575A /* CategoriesScene.m */,
+				079D1C001C1AA25E0003575A /* StampbookScene.h */,
+				079D1C011C1AA25E0003575A /* StampbookScene.m */,
+				079D1BFD1C1AA2470003575A /* HighscoreScene.h */,
+				079D1BFE1C1AA2470003575A /* HighscoreScene.m */,
+				B7378992180767190076A88C /* MainScene.h */,
+				B7378993180767190076A88C /* MainScene.m */,
+				072174EE1C1B1709008086C5 /* Scene.h */,
+				072174EF1C1B1709008086C5 /* Scene.m */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		072174F11C1B2775008086C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				079D1C0F1C1AE7FA0003575A /* YellowFish.h */,
+				079D1C101C1AE7FB0003575A /* YellowFish.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		5B12100D197483EE004C1E1D /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,24 +498,8 @@
 			isa = PBXGroup;
 			children = (
 				7A40362019DDEF0D007B6E8F /* Platforms */,
-				079D1BF31C1A9B980003575A /* SceneManager.h */,
-				B7378992180767190076A88C /* MainScene.h */,
-				B7378993180767190076A88C /* MainScene.m */,
-				079D1BF41C1A9B980003575A /* SceneManager.m */,
-				079D1C061C1AA5630003575A /* GameplayScene.h */,
-				079D1C071C1AA5630003575A /* GameplayScene.m */,
-				079D1BFA1C1A9E370003575A /* HowToPlayScene.h */,
-				079D1BFB1C1A9E370003575A /* HowToPlayScene.m */,
-				079D1C091C1ABC820003575A /* ModeScene.h */,
-				079D1C0A1C1ABC820003575A /* ModeScene.m */,
-				079D1C0C1C1ABDE90003575A /* CategoriesScene.h */,
-				079D1C0D1C1ABDE90003575A /* CategoriesScene.m */,
-				079D1C001C1AA25E0003575A /* StampbookScene.h */,
-				079D1C011C1AA25E0003575A /* StampbookScene.m */,
-				079D1BFD1C1AA2470003575A /* HighscoreScene.h */,
-				079D1BFE1C1AA2470003575A /* HighscoreScene.m */,
-				079D1C0F1C1AE7FA0003575A /* YellowFish.h */,
-				079D1C101C1AE7FB0003575A /* YellowFish.m */,
+				072174EB1C1B15CA008086C5 /* Scene */,
+				072174F11C1B2775008086C5 /* Model */,
 				D352B48019EC608A00829775 /* MetalShaders */,
 			);
 			name = Source;
@@ -856,6 +877,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072174F01C1B1709008086C5 /* Scene.m in Sources */,
 				079D1C081C1AA5630003575A /* GameplayScene.m in Sources */,
 				079D1C021C1AA25E0003575A /* StampbookScene.m in Sources */,
 				079D1C0E1C1ABDE90003575A /* CategoriesScene.m in Sources */,
