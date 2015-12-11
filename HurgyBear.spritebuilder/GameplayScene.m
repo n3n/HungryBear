@@ -11,12 +11,12 @@
 #import "YellowFish.h"
 
 @implementation GameplayScene {
-
+    NSMutableSet<CCNode *> *objectList;
 }
 
 - (void)didLoadFromCCB {
     self.userInteractionEnabled = YES;
-    [self setupYellowFish];
+    [self setupData];
 }
 
 - (void)mainMenuButtonTapped {
@@ -24,27 +24,39 @@
 }
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
-    CGPoint touchLocation = [touch locationInNode:self];
-    YellowFish *newSprite = (YellowFish *)[CCBReader load:@"YellowFish"];
-    newSprite.position = touchLocation;
-    [self addChild:newSprite];
+    CGPoint touchLocation = [self convertToNodeSpace:[touch locationInNode:self]];
+    CCNode *targetNode = [self getNodeByTouchLocation:touchLocation];
 }
 
 - (void)touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
-    NSLog(@"");
+    CCLOG(@"Cancelled");
 }
 
 - (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
-    
+    CCLOG(@"Ended");
 }
 
-- (void)setupYellowFish {
-//    YellowFish *newSprite = (YellowFish *)[CCBReader load:@"YellowFish"];;
-//    newSprite.position = CGPointMake(250, 100);
-//    [self addChild:newSprite];
+- (void)setupData {
+    objectList = [[NSMutableSet alloc] init];
 }
 
+- (void)addChild:(CCNode *)node {
+    [super addChild:node];
+    [objectList addObject:node];
+}
 
+- (CCNode *)getNodeByTouchLocation:(CGPoint)touchLocation {
+    CCNode *node = nil;
+    for (CCNode *tmpNode in objectList) {
+        NSLog(@"(%.2f, %.2f) | (%.2f, %.2f)", touchLocation.x, touchLocation.y, tmpNode.position.x, tmpNode.position.y);
+        if(CGRectContainsPoint(tmpNode.boundingBox, touchLocation)) {
+            node = tmpNode;
+            CCLOG(@"Overlap!");
+            break;
+        }
+    }
+    return node;
+}
 - (void)skipButtonTapped {
     CCLOG(@"Skipp ButtonTapped!!");
 }
