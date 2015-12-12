@@ -8,8 +8,15 @@
 
 #import "ModeScene.h"
 #import "SceneManager.h"
+#import "CategoryList.h"
 
-@implementation ModeScene
+@implementation ModeScene {
+    CategoryList *categoryList;
+}
+
+- (void)didLoadFromCCB {
+    categoryList = [CategoryList sharedInstance];
+}
 
 - (void)mainMenuButtonTapped {
     [SceneManager loadScene:@"MainScene"];

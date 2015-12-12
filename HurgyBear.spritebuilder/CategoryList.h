@@ -14,6 +14,8 @@
 @property (strong, readonly)NSArray<WordCategory *> *categories;
 @property (readonly)NSUInteger count;
 - (WordCategory *)categoryAtIndex:(NSInteger)index;
+- (WordCategory *)categoryByCategoryName:(NSString *)categoryName;
+
 
 // Initialize Method
 - (instancetype)initWithDefaultData;

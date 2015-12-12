@@ -51,4 +51,13 @@
     return categoryList[index];
 }
 
+- (WordCategory *)categoryByCategoryName:(NSString *)categoryName {
+    for (WordCategory *category in categoryList) {
+        if([categoryName isEqualToString:category.categoryName]) {
+            return category;
+        }
+    }
+    return nil;
+}
+
 @end
