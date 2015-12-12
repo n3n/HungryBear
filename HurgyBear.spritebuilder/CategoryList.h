@@ -16,6 +16,9 @@
 - (WordCategory *)categoryAtIndex:(NSInteger)index;
 
 // Initialize Method
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDefaultData;
+
+// Singleton share instance
++ (instancetype)sharedInstance;
 
 @end

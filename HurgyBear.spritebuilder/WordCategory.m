@@ -8,13 +8,17 @@
 
 #import "WordCategory.h"
 #import "Word.h"
+
+const NSString *kIsLocked = @"isLocked";
+const NSString *kCategoryName = @"categoryName";
+const NSString *kWordList = @"wordList";
+
 @implementation WordCategory {
-    NSArray<Word *> *wordList;
+    NSArray<Word *> *words;
 }
 
 - (void)setupData {
-    self.isPlayed = NO;
-    wordList = [[NSArray alloc] init];
+    words = [[NSArray alloc] init];
 }
 
 - (instancetype)init {
@@ -28,16 +32,26 @@
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     if(self) {
-        
+        self.categoryName = dictionary[kCategoryName];
+        self.isLocked = dictionary[kIsLocked];
+        words = [self parserWordList:dictionary[kWordList]];
     }
     return self;
 }
 
-- (NSArray<Word *> *)words {
-    return wordList;
+- (NSArray *)parserWordList:(NSArray *)array {
+    NSMutableArray *tmpArray = [[NSMutableArray alloc] init];
+    for (NSDictionary *dict in array) {
+        [tmpArray addObject:[[Word alloc] initWithDictionary:dict]];
+    }
+    return [[NSArray alloc] initWithArray:tmpArray];
+}
+
+- (NSArray<Word *> *)wordList {
+    return words;
 }
 
 - (Word *)wordAtIndex:(NSInteger)index {
-    return wordList[index];
+    return words[index];
 }
 @end

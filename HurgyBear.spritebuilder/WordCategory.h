@@ -10,11 +10,15 @@
 @class WordList;
 @class Word;
 
+extern const NSString *kCategoryName;
+extern const NSString *kIsLocked;
+extern const NSString *kWordList;
+
 @interface WordCategory : NSObject
 
 @property (nonatomic, copy)NSString *categoryName;
-@property (readonly, strong)NSArray<Word *> *words;
-@property (nonatomic)BOOL isPlayed;
+@property (readonly, strong)NSArray<Word *> *wordList;
+@property (nonatomic)BOOL isLocked;
 
 - (Word *)wordAtIndex:(NSInteger)index;
 @property NSInteger stars;

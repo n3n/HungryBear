@@ -8,7 +8,23 @@
 
 #import "Word.h"
 
+const NSString *kVocabulary = @"vocabulary";
+const NSString *kImagePath = @"imagePath";
+const NSString *kIsLocked = @"isLocked";
+const NSString *kFailed = @"failed";
+
 @implementation Word
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        self.vocabulary = dictionary[kVocabulary];
+        self.imagePath = dictionary[kImagePath];
+        self.isLocked = dictionary[kIsLocked];
+        self.failedCount = [dictionary[kFailed] intValue];
+    }
+    return self;
+}
 
 - (BOOL)isCorrect:(NSString *)otherWord {
     return [self.vocabulary isEqualToString:otherWord];
@@ -20,14 +36,6 @@
         [array exchangeObjectAtIndex:i - 1 withObjectAtIndex:arc4random_uniform((u_int32_t)i)];
     }
     return [[NSArray alloc] initWithArray:array];
-}
-
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
-    if (self) {
-
-    }
-    return self;
 }
 
 - (NSArray *)arrayOfCharacter {

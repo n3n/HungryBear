@@ -10,13 +10,16 @@
 
 extern const NSString *kVocabulary;
 extern const NSString *kImagePath;
+extern const NSString *kIsLocked;
+extern const NSString *kFailed;
 
 @interface Word : NSObject
 
 @property (nonatomic, copy)NSString *vocabulary;
 @property (nonatomic, copy)NSString *imagePath;
 @property (nonatomic, readonly)NSArray *arrayOfCharacter;
-@property NSInteger playCount;
+@property NSInteger failedCount;
+@property BOOL isLocked;
 //@property (nonatomic, strong) *image;
 //@property (readonly)BOOL ;
 
