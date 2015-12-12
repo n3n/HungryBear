@@ -10,7 +10,7 @@
 
 extern const NSString *kVocabulary;
 extern const NSString *kImagePath;
-extern const NSString *kIsLocked;
+extern const NSString *kIsFound;
 extern const NSString *kFailed;
 
 @interface Word : NSObject
@@ -19,7 +19,7 @@ extern const NSString *kFailed;
 @property (nonatomic, copy)NSString *imagePath;
 @property (nonatomic, readonly)NSArray *arrayOfCharacter;
 @property NSInteger failedCount;
-@property BOOL isLocked;
+@property BOOL isFound;
 //@property (nonatomic, strong) *image;
 //@property (readonly)BOOL ;
 

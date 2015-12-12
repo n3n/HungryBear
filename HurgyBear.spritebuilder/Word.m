@@ -10,7 +10,7 @@
 
 const NSString *kVocabulary = @"vocabulary";
 const NSString *kImagePath = @"imagePath";
-const NSString *kIsLocked = @"isLocked";
+const NSString *kIsFound = @"isFound";
 const NSString *kFailed = @"failed";
 
 @implementation Word
@@ -20,7 +20,7 @@ const NSString *kFailed = @"failed";
     if (self) {
         self.vocabulary = dictionary[kVocabulary];
         self.imagePath = dictionary[kImagePath];
-        self.isLocked = dictionary[kIsLocked];
+        self.isFound = dictionary[kIsFound];
         self.failedCount = [dictionary[kFailed] intValue];
     }
     return self;
