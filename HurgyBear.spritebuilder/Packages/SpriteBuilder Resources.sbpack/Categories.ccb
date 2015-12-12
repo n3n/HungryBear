@@ -582,8 +582,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1017,8 +1015,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>140.69999694824219</real>
+							<real>73.333335876464844</real>
+							<real>174.89999389648438</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1047,8 +1045,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>0.0</real>
+							<real>0.66666668653488159</real>
+							<real>0.66666668653488159</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1083,7 +1081,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>1</real>
+						<real>0.33333331346511841</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1095,7 +1093,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>1</real>
+							<real>0.33333331346511841</real>
 						</array>
 					</dict>
 					<dict>
@@ -1119,8 +1117,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>Categories_Smoke_2</string>
-				<key>hidden</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -1367,8 +1363,6 @@
 				<string></string>
 				<key>displayName</key>
 				<string>Categories_Smoke_3</string>
-				<key>hidden</key>
-				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -1395,8 +1389,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>125.2691650390625</real>
-							<real>203</real>
+							<real>145.28971862792969</real>
+							<real>216.33332824707031</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1425,8 +1419,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.33333331346511841</real>
+							<real>0.33333331346511841</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -1461,7 +1455,7 @@
 						<key>type</key>
 						<string>Float</string>
 						<key>value</key>
-						<real>1</real>
+						<real>0.33333331346511841</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1473,7 +1467,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>1</real>
+							<real>0.33333331346511841</real>
 						</array>
 					</dict>
 					<dict>
@@ -1485,6 +1479,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -3148,7 +3144,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>138.93527221679688</real>
+							<real>139</real>
 							<real>127</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3256,7 +3252,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>152.97232055664062</real>
+							<real>154</real>
 							<real>127</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3364,7 +3360,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>166.96763610839844</real>
+							<real>169</real>
 							<real>127</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3472,7 +3468,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>220</real>
+							<real>219</real>
 							<real>127</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3580,7 +3576,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>234.4293212890625</real>
+							<real>234</real>
 							<real>127</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3688,7 +3684,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>249.21466064453125</real>
+							<real>249</real>
 							<real>127</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3904,7 +3900,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.66666668653488159</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

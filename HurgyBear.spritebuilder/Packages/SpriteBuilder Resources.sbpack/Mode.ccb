@@ -496,7 +496,7 @@
 						<key>type</key>
 						<string>StringSimple</string>
 						<key>value</key>
-						<string></string>
+						<string>easy</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -822,7 +822,7 @@
 						<key>type</key>
 						<string>StringSimple</string>
 						<key>value</key>
-						<string></string>
+						<string>normal</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1148,7 +1148,7 @@
 						<key>type</key>
 						<string>StringSimple</string>
 						<key>value</key>
-						<string></string>
+						<string>hard</string>
 					</dict>
 					<dict>
 						<key>name</key>
