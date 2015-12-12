@@ -7,7 +7,8 @@
 //
 
 #import "CCNode.h"
+#import "Fish.h"
 
-@interface YellowFish : CCNode
+@interface YellowFish : Fish
 
 @end
