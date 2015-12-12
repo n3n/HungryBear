@@ -13,7 +13,6 @@
 		077057771C1BD74D002D698B /* Fish.m in Sources */ = {isa = PBXBuildFile; fileRef = 0770576D1C1BD74D002D698B /* Fish.m */; };
 		077057781C1BD74D002D698B /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0770576F1C1BD74D002D698B /* Word.m */; };
 		077057791C1BD74D002D698B /* WordCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057711C1BD74D002D698B /* WordCategory.m */; };
-		0770577A1C1BD74D002D698B /* WordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057731C1BD74D002D698B /* WordList.m */; };
 		0770577B1C1BD74D002D698B /* YellowFish.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057751C1BD74D002D698B /* YellowFish.m */; };
 		079D1BF51C1A9B980003575A /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BF41C1A9B980003575A /* SceneManager.m */; };
 		079D1BFC1C1A9E370003575A /* HowToPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFB1C1A9E370003575A /* HowToPlayScene.m */; };
@@ -176,8 +175,6 @@
 		0770576F1C1BD74D002D698B /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
 		077057701C1BD74D002D698B /* WordCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCategory.h; sourceTree = "<group>"; };
 		077057711C1BD74D002D698B /* WordCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCategory.m; sourceTree = "<group>"; };
-		077057721C1BD74D002D698B /* WordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordList.h; sourceTree = "<group>"; };
-		077057731C1BD74D002D698B /* WordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordList.m; sourceTree = "<group>"; };
 		077057741C1BD74D002D698B /* YellowFish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowFish.h; sourceTree = "<group>"; };
 		077057751C1BD74D002D698B /* YellowFish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowFish.m; sourceTree = "<group>"; };
 		079D1BF31C1A9B980003575A /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
@@ -356,8 +353,6 @@
 				0770576F1C1BD74D002D698B /* Word.m */,
 				077057701C1BD74D002D698B /* WordCategory.h */,
 				077057711C1BD74D002D698B /* WordCategory.m */,
-				077057721C1BD74D002D698B /* WordList.h */,
-				077057731C1BD74D002D698B /* WordList.m */,
 				077057741C1BD74D002D698B /* YellowFish.h */,
 				077057751C1BD74D002D698B /* YellowFish.m */,
 			);
@@ -924,7 +919,6 @@
 				077057781C1BD74D002D698B /* Word.m in Sources */,
 				079D1BFC1C1A9E370003575A /* HowToPlayScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
-				0770577A1C1BD74D002D698B /* WordList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
