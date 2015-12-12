@@ -8,8 +8,18 @@
 
 #import "YellowFish.h"
 
-@implementation YellowFish {
-    CCLabelTTF *alphabetLabel;
+
+@implementation YellowFish
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        [self setupData];
+    }
+    return self;
+}
+
+- (void)setupData {
 }
 
 

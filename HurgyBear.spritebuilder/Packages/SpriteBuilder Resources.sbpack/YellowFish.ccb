@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>3</integer>
+	<integer>4</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -71,8 +71,23 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+							<real>0.43841186165809631</real>
+							<real>0.41795265674591064</real>
+=======
 							<real>0.40841326117515564</real>
 							<real>0.47800686955451965</real>
+>>>>>>> origin/master
+=======
+							<real>0.40841326117515564</real>
+							<real>0.47800686955451965</real>
+>>>>>>> origin/master
+=======
+							<real>0.40841326117515564</real>
+							<real>0.47800686955451965</real>
+>>>>>>> origin/master
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -263,7 +278,7 @@
 				<key>type</key>
 				<string>StringSimple</string>
 				<key>value</key>
-				<string></string>
+				<string>YellowFish</string>
 			</dict>
 			<dict>
 				<key>name</key>
