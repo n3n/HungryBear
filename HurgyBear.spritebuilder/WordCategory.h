@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 @class WordList;
+@class Word;
 
 @interface WordCategory : NSObject
 
 @property (nonatomic, copy)NSString *categoryName;
-@property (strong, readonly)NSArray<WordList *> *wordList;
-@property (nonatomic, readonly)BOOL isPlay;
+@property (readonly, strong)NSArray<Word *> *words;
+@property (nonatomic)BOOL isPlayed;
+
+- (Word *)wordAtIndex:(NSInteger)index;
+@property NSInteger stars;
 @property NSInteger highScore;
 
 // Initialize method

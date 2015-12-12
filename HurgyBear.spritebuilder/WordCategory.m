@@ -7,7 +7,37 @@
 //
 
 #import "WordCategory.h"
+#import "Word.h"
+@implementation WordCategory {
+    NSArray<Word *> *wordList;
+}
 
-@implementation WordCategory
+- (void)setupData {
+    self.isPlayed = NO;
+    wordList = [[NSArray alloc] init];
+}
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setupData];
+    }
+    return self;
+}
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if(self) {
+        
+    }
+    return self;
+}
+
+- (NSArray<Word *> *)words {
+    return wordList;
+}
+
+- (Word *)wordAtIndex:(NSInteger)index {
+    return wordList[index];
+}
 @end
