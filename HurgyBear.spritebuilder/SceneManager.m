@@ -7,12 +7,14 @@
 //
 
 #import "SceneManager.h"
+#import "Scene.h"
 
 @implementation SceneManager
 
-+ (void)loadScene:(NSString *)sceneName {
++ (CCScene *)loadScene:(NSString *)sceneName {
     CCScene *gameScene = [CCBReader loadAsScene:sceneName];
     [[CCDirector sharedDirector] replaceScene:gameScene];
+    return gameScene;
 }
 
 @end

@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface SceneManager : NSObject
-+ (void)loadScene:(NSString *)sceneName;
++ (CCScene *)loadScene:(NSString *)sceneName;
 @end
