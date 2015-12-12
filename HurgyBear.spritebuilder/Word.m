@@ -46,4 +46,8 @@ const NSString *kFailed = @"failed";
     return chars;
 }
 
+- (NSUInteger)length {
+    return self.vocabulary.length;
+}
+
 @end

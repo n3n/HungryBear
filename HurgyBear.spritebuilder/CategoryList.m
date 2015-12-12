@@ -40,9 +40,7 @@
         WordCategory *category = [[WordCategory alloc] initWithDictionary:dict];
         [tmpCategoryList addObject:category];
     }
-    
     categoryList = [[NSArray alloc] initWithArray:tmpCategoryList];
-    NSLog(@"%@", categoryList);
 }
 
 - (NSArray<WordCategory *> *)categories {

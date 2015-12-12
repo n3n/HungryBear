@@ -21,8 +21,6 @@
 
 - (void)fruitVegetableButtonTapped {
     [SceneManager loadScene:@"Gameplay"];
-    
-    
 }
 
 @end
