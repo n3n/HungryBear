@@ -2,6 +2,7 @@
 #import "MainScene.h"
 #import "SceneManager.h"
 #import "CategoryList.h"
+#import "ModeScene.h"
 
 @implementation MainScene
 
