@@ -7,7 +7,8 @@
 //
 
 #import "CCNode.h"
+@class GameplayScene;
 
 @interface PauseScene : CCNode
-
+@property (nonatomic, strong) GameplayScene *originalScene;
 @end

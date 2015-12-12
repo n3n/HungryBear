@@ -10,5 +10,5 @@
 #import "Scene.h"
 
 @interface GameplayScene : Scene
-
+@property BOOL isPaused;
 @end
