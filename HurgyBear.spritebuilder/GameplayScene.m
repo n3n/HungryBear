@@ -38,6 +38,7 @@
     
     CGPoint touchLocation = [self convertToNodeSpace:[touch locationInNode:self]];
     CCNode *targetNode = [self getNodeByTouchLocation:touchLocation];
+    CCLOG(@"%@", targetNode);
     
     [self touchForFishing:YES];
     
@@ -64,9 +65,8 @@
     
     yellowFish = [CCBReader load:@"YellowFish"];
     CGSize location = [[CCDirector sharedDirector] viewSize];
-    
     yellowFish.position = ccp(location.width/4, location.height/2);
-    [self addChild:yellowFish];
+    [self addGameObject:yellowFish];
     
 }
 
@@ -78,7 +78,7 @@
 - (CCNode *)getNodeByTouchLocation:(CGPoint)touchLocation {
     CCNode *node = nil;
     for (CCNode *tmpNode in objectList) {
-        NSLog(@"(%.2f, %.2f) | (%.2f, %.2f)", touchLocation.x, touchLocation.y, tmpNode.position.x, tmpNode.position.y);
+//        NSLog(@"(%.2f, %.2f) | (%.2f, %.2f)", touchLocation.x, touchLocation.y, tmpNode.position.x, tmpNode.position.y);
         if(CGRectContainsPoint(tmpNode.boundingBox, touchLocation)) {
             node = tmpNode;
             CCLOG(@"Overlap!");
