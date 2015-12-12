@@ -13,7 +13,9 @@
 @implementation PauseScene
 
 - (void)didLoadFromCCB {
-    
+    self.positionType = CCPositionTypeNormalized;
+    self.position = ccp(0.0, 0.0);
+    self.zOrder = INT_MAX;
 }
 
 - (void)resumeButtonTapped {
@@ -37,8 +39,13 @@
         child.userInteractionEnabled = YES;
     }
     self.originalScene.isPaused = NO;
+    self.originalScene.paused = NO;
     [self.originalScene removeChild:self];
 
+}
+
+- (void)configureWithDictionary:(GameplayScene *)originalScene {
+    self.originalScene = originalScene;
 }
 
 @end

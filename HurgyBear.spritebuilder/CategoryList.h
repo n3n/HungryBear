@@ -17,6 +17,7 @@
 - (WordCategory *)categoryByCategoryName:(NSString *)categoryName;
 
 @property NSInteger mode;
+@property (copy, nonatomic)NSString *selectedCategory;
 
 // Initialize Method
 - (instancetype)initWithDefaultData;

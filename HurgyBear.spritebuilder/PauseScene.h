@@ -11,4 +11,5 @@
 
 @interface PauseScene : CCNode
 @property (nonatomic, strong) GameplayScene *originalScene;
+- (void)configureWithDictionary:(GameplayScene *)originalScene;
 @end

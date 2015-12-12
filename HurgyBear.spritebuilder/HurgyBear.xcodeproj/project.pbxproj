@@ -15,6 +15,7 @@
 		077057791C1BD74D002D698B /* WordCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057711C1BD74D002D698B /* WordCategory.m */; };
 		0770577B1C1BD74D002D698B /* YellowFish.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057751C1BD74D002D698B /* YellowFish.m */; };
 		079575EB1C1C4570005E8583 /* wordlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 079575EA1C1C4570005E8583 /* wordlist.json */; settings = {ASSET_TAGS = (); }; };
+		079575F61C1CB7E5005E8583 /* GameplayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 079575F51C1CB7E5005E8583 /* GameplayModel.m */; settings = {ASSET_TAGS = (); }; };
 		079D1BF51C1A9B980003575A /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BF41C1A9B980003575A /* SceneManager.m */; };
 		079D1BFC1C1A9E370003575A /* HowToPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFB1C1A9E370003575A /* HowToPlayScene.m */; };
 		079D1BFF1C1AA2470003575A /* HighscoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFE1C1AA2470003575A /* HighscoreScene.m */; };
@@ -179,6 +180,8 @@
 		077057741C1BD74D002D698B /* YellowFish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowFish.h; sourceTree = "<group>"; };
 		077057751C1BD74D002D698B /* YellowFish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowFish.m; sourceTree = "<group>"; };
 		079575EA1C1C4570005E8583 /* wordlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordlist.json; sourceTree = "<group>"; };
+		079575F41C1CB7E5005E8583 /* GameplayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayModel.h; sourceTree = "<group>"; };
+		079575F51C1CB7E5005E8583 /* GameplayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayModel.m; sourceTree = "<group>"; };
 		079D1BF31C1A9B980003575A /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		079D1BF41C1A9B980003575A /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneManager.m; sourceTree = "<group>"; };
 		079D1BFA1C1A9E370003575A /* HowToPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPlayScene.h; sourceTree = "<group>"; };
@@ -381,6 +384,8 @@
 			children = (
 				079D1C061C1AA5630003575A /* GameplayScene.h */,
 				079D1C071C1AA5630003575A /* GameplayScene.m */,
+				079575F41C1CB7E5005E8583 /* GameplayModel.h */,
+				079575F51C1CB7E5005E8583 /* GameplayModel.m */,
 			);
 			name = Gameplay;
 			sourceTree = "<group>";
@@ -935,6 +940,7 @@
 				072174F01C1B1709008086C5 /* Scene.m in Sources */,
 				077057761C1BD74D002D698B /* CategoryList.m in Sources */,
 				079D1C081C1AA5630003575A /* GameplayScene.m in Sources */,
+				079575F61C1CB7E5005E8583 /* GameplayModel.m in Sources */,
 				079D1C021C1AA25E0003575A /* StampbookScene.m in Sources */,
 				079D1C0E1C1ABDE90003575A /* CategoriesScene.m in Sources */,
 				077057611C1BD419002D698B /* PauseScene.m in Sources */,

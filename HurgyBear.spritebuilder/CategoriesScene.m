@@ -27,10 +27,12 @@
 }
 
 - (void)animalButtonTapped {
+    categoryList.selectedCategory = @"Animals";
     [SceneManager loadScene:@"Gameplay"];
 }
 
 - (void)fruitVegetableButtonTapped {
+    categoryList.selectedCategory = @"Fruits";
     [SceneManager loadScene:@"Gameplay"];
 }
 
