@@ -11,6 +11,10 @@
 
 @implementation CategoriesScene
 
+- (void)didLoadFromCCB {
+    
+}
+
 - (void)modeButtonTapped {
     [SceneManager loadScene:@"Mode"];
 }

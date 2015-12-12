@@ -11,6 +11,10 @@
 
 @implementation StampbookScene
 
+- (void)didLoadFromCCB {
+    
+}
+
 - (void)mainMenuButtonTapped {
     [SceneManager loadScene:@"MainScene"];
 }

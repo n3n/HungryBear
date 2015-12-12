@@ -11,6 +11,10 @@
 
 @implementation HighscoreScene
 
+- (void)didLoadFromCCB {
+    
+}
+
 - (void)mainMenuButtonTapped {
     [SceneManager loadScene:@"MainScene"];
 }
