@@ -14,7 +14,6 @@
 
 - (void)resumeButtonTapped {
     [self resumeGamePlayScene];
-
     CCLOG(@"Resume ButtonTapped");
 }
 
@@ -31,9 +30,11 @@
 - (void)resumeGamePlayScene {
     for(CCNode *child in [self.originalScene children]) {
         child.paused = NO;
+        child.userInteractionEnabled = YES;
     }
     self.originalScene.isPaused = NO;
     [self.originalScene removeChild:self];
+
 }
 
 @end

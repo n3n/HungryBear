@@ -27,8 +27,17 @@
 }
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
+    if(self.isPaused) return;
+    CCLOG(@"Touch Began");
+    
     CGPoint touchLocation = [self convertToNodeSpace:[touch locationInNode:self]];
     CCNode *targetNode = [self getNodeByTouchLocation:touchLocation];
+    
+    CCNode *hookDown = [self getChildByName:@"Hook_Down_Pic" recursively:YES];
+    hookDown.visible = NO;
+    CCNode *hookRaise = [self getChildByName:@"Hook_Raise_Pic" recursively:YES];
+    hookRaise.visible = YES;
+    
     
 //    CGSize location = [[CCDirector sharedDirector] viewSize];
 //    id move = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(0, location.height/2)];
@@ -39,10 +48,22 @@
 
 - (void)touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
     CCLOG(@"Cancelled");
+    if (self.isPaused) return;
+    
+    CCNode *hookDown = [self getChildByName:@"Hook_Down_Pic" recursively:YES];
+    hookDown.visible = YES;
+    CCNode *hookRaise = [self getChildByName:@"Hook_Raise_Pic" recursively:YES];
+    hookRaise.visible = NO;
 }
 
 - (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
+    if (self.isPaused) return;
+    
     CCLOG(@"Ended");
+    CCNode *hookDown = [self getChildByName:@"Hook_Down_Pic" recursively:YES];
+    hookDown.visible = YES;
+    CCNode *hookRaise = [self getChildByName:@"Hook_Raise_Pic" recursively:YES];
+    hookRaise.visible = NO;
 }
 
 - (void)setupData {
@@ -75,23 +96,27 @@
     return node;
 }
 - (void)skipButtonTapped {
+    if (self.isPaused) return;
     CCLOG(@"Skipp ButtonTapped!!");
 }
 
 - (void)resetButtonTapped {
+    if (self.isPaused) return;
     CCLOG(@"Reset ButtonTapped!!");
 }
 
 - (void)deleteButtonTapped {
+    if (self.isPaused) return;
     CCLOG(@"Delete ButttonTapped!!");
 }
 
 - (void)soundButtonTapped {
-    
+    if (self.isPaused) return;
     CCLOG(@"Sound ButtonTapped!!");
 }
 
 - (void)pauseButtonTapped {
+    
     if (!self.isPaused) {
 
         [self popupPasueScene];
@@ -106,7 +131,9 @@
 -(void)pauseGamePlayScene {
     for(CCNode *child in [self children]) {
         child.paused = YES;
+        child.userInteractionEnabled = NO;
     }
+
 }
 - (void)popupPasueScene {
     PauseScene *pauseScene = (PauseScene *)[CCBReader load:@"Pause"];
