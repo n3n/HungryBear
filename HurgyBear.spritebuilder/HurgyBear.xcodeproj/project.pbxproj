@@ -14,6 +14,7 @@
 		077057781C1BD74D002D698B /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0770576F1C1BD74D002D698B /* Word.m */; };
 		077057791C1BD74D002D698B /* WordCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057711C1BD74D002D698B /* WordCategory.m */; };
 		0770577B1C1BD74D002D698B /* YellowFish.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057751C1BD74D002D698B /* YellowFish.m */; };
+		079575EB1C1C4570005E8583 /* wordlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 079575EA1C1C4570005E8583 /* wordlist.json */; settings = {ASSET_TAGS = (); }; };
 		079D1BF51C1A9B980003575A /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BF41C1A9B980003575A /* SceneManager.m */; };
 		079D1BFC1C1A9E370003575A /* HowToPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFB1C1A9E370003575A /* HowToPlayScene.m */; };
 		079D1BFF1C1AA2470003575A /* HighscoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFE1C1AA2470003575A /* HighscoreScene.m */; };
@@ -177,6 +178,7 @@
 		077057711C1BD74D002D698B /* WordCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCategory.m; sourceTree = "<group>"; };
 		077057741C1BD74D002D698B /* YellowFish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowFish.h; sourceTree = "<group>"; };
 		077057751C1BD74D002D698B /* YellowFish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowFish.m; sourceTree = "<group>"; };
+		079575EA1C1C4570005E8583 /* wordlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordlist.json; sourceTree = "<group>"; };
 		079D1BF31C1A9B980003575A /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		079D1BF41C1A9B980003575A /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneManager.m; sourceTree = "<group>"; };
 		079D1BFA1C1A9E370003575A /* HowToPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPlayScene.h; sourceTree = "<group>"; };
@@ -359,6 +361,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		079575EE1C1C4572005E8583 /* jsonFile */ = {
+			isa = PBXGroup;
+			children = (
+				079575EA1C1C4570005E8583 /* wordlist.json */,
+			);
+			name = jsonFile;
+			sourceTree = "<group>";
+		};
 		5B12100D197483EE004C1E1D /* res */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +533,7 @@
 			isa = PBXGroup;
 			children = (
 				7A40362019DDEF0D007B6E8F /* Platforms */,
+				079575EE1C1C4572005E8583 /* jsonFile */,
 				072174EB1C1B15CA008086C5 /* Scene */,
 				072174F11C1B2775008086C5 /* Model */,
 				D352B48019EC608A00829775 /* MetalShaders */,
@@ -820,6 +831,7 @@
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
+				079575EB1C1C4570005E8583 /* wordlist.json in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
