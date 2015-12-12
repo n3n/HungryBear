@@ -20,7 +20,7 @@ const NSString *kFailed = @"failed";
     if (self) {
         self.vocabulary = dictionary[kVocabulary];
         self.imagePath = dictionary[kImagePath];
-        self.isFound = dictionary[kIsFound];
+        self.isFound = [dictionary[kIsFound] intValue];
         self.failedCount = [dictionary[kFailed] intValue];
     }
     return self;

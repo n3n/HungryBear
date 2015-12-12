@@ -33,7 +33,7 @@ const NSString *kWordList = @"wordList";
     self = [super init];
     if(self) {
         self.categoryName = dictionary[kCategoryName];
-        self.isLocked = dictionary[kIsLocked];
+        self.isLocked = [dictionary[kIsLocked] intValue];
         words = [self parserWordList:dictionary[kWordList]];
     }
     return self;
