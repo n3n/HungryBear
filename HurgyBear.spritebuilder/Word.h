@@ -8,16 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+extern const NSString *kVocabulary;
+extern const NSString *kImagePath;
+
 @interface Word : NSObject
 
 @property (nonatomic, copy)NSString *vocabulary;
 @property (nonatomic, copy)NSString *imagePath;
+@property (nonatomic, readonly)NSArray *arrayOfCharacter;
 @property NSInteger playCount;
 //@property (nonatomic, strong) *image;
 //@property (readonly)BOOL ;
 
 - (BOOL)isCorrect:(NSString *)otherWord;
-- (NSArray *)randomArrayOfCharacterForWord:(NSInteger)length;
+- (NSArray *)suffleArrayOfCharacter;
 
 // Initialize method
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary;
