@@ -21,7 +21,6 @@ extern const NSString *kFailed;
 @property NSInteger failedCount;
 @property BOOL isFound;
 //@property (nonatomic, strong) *image;
-//@property (readonly)BOOL ;
 
 - (BOOL)isCorrect:(NSString *)otherWord;
 - (NSArray *)suffleArrayOfCharacter;

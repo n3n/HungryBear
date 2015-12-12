@@ -347,16 +347,13 @@
 		072174F11C1B2775008086C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				079575EF1C1C71CD005E8583 /* Fish */,
 				0770576A1C1BD74D002D698B /* CategoryList.h */,
 				0770576B1C1BD74D002D698B /* CategoryList.m */,
-				0770576C1C1BD74D002D698B /* Fish.h */,
-				0770576D1C1BD74D002D698B /* Fish.m */,
-				0770576E1C1BD74D002D698B /* Word.h */,
-				0770576F1C1BD74D002D698B /* Word.m */,
 				077057701C1BD74D002D698B /* WordCategory.h */,
 				077057711C1BD74D002D698B /* WordCategory.m */,
-				077057741C1BD74D002D698B /* YellowFish.h */,
-				077057751C1BD74D002D698B /* YellowFish.m */,
+				0770576E1C1BD74D002D698B /* Word.h */,
+				0770576F1C1BD74D002D698B /* Word.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -367,6 +364,17 @@
 				079575EA1C1C4570005E8583 /* wordlist.json */,
 			);
 			name = jsonFile;
+			sourceTree = "<group>";
+		};
+		079575EF1C1C71CD005E8583 /* Fish */ = {
+			isa = PBXGroup;
+			children = (
+				0770576C1C1BD74D002D698B /* Fish.h */,
+				0770576D1C1BD74D002D698B /* Fish.m */,
+				077057741C1BD74D002D698B /* YellowFish.h */,
+				077057751C1BD74D002D698B /* YellowFish.m */,
+			);
+			name = Fish;
 			sourceTree = "<group>";
 		};
 		5B12100D197483EE004C1E1D /* res */ = {

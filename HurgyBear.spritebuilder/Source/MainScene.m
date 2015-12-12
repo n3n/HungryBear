@@ -1,11 +1,12 @@
 
 #import "MainScene.h"
 #import "SceneManager.h"
+#import "CategoryList.h"
 
 @implementation MainScene
 
 - (void)didLoadFromCCB {
-//    [self playButtonTapped];
+    [CategoryList sharedInstance];
 }
 - (void)fishingButtonTapped {
     [SceneManager loadScene:@"Mode"];
@@ -21,10 +22,5 @@
 - (void)stampbookButtonTapped {
     [SceneManager loadScene:@"Stampbook"];
 }
-
-
-
-
-
 
 @end

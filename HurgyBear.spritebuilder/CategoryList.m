@@ -35,7 +35,6 @@
     NSString * filePath =[[NSBundle mainBundle] pathForResource:@"wordlist" ofType:@"json"];
     NSData *dataJSON = [NSData dataWithContentsOfFile:filePath];
     NSArray *json = [NSJSONSerialization JSONObjectWithData:dataJSON options:kNilOptions error:nil];
-    
     NSMutableArray *tmpCategoryList = [[NSMutableArray alloc] init];
     for (NSDictionary *dict in json) {
         WordCategory *category = [[WordCategory alloc] initWithDictionary:dict];
@@ -43,6 +42,7 @@
     }
     
     categoryList = [[NSArray alloc] initWithArray:tmpCategoryList];
+    NSLog(@"%@", categoryList);
 }
 
 - (NSArray<WordCategory *> *)categories {
