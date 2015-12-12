@@ -1,446 +1,446 @@
- [
-  {
-		"categoryName": "Animals",
-		"isLocked": false,
-		"wordList": [
-                     {
-                     "vocabulary": "Cat",
-                     "imagePath": "cat.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Dog",
-                     "imagePath": "dog.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Bear",
-                     "imagePath": "bear.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Boar",
-                     "imagePath": "boar.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Bear",
-                     "imagePath": "bear.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Camel",
-                     "imagePath": "camel.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Chick",
-                     "imagePath": "chick.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Cock",
-                     "imagePath": "cock.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Cow",
-                     "imagePath": "cow.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Deer",
-                     "imagePath": "deer.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Donkey",
-                     "imagePath": "donkey.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Elephant",
-                     "imagePath": "elephant.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Gibbon",
-                     "imagePath": "gibbon.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Hamsters",
-                     "imagePath": "hamsters.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Hawk",
-                     "imagePath": "hawk.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Hen",
-                     "imagePath": "hen.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Horse",
-                     "imagePath": "horse.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "King Kong",
-                     "imagePath": "king kong.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Koala",
-                     "imagePath": "koala.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Leopard",
-                     "imagePath": "leopard.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Lion",
-                     "imagePath": "lion.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Monkey",
-                     "imagePath": "monkey.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Owl",
-                     "imagePath": "owl.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Panda",
-                     "imagePath": "panda.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Parrot",
-                     "imagePath": "parrot.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Penguin",
-                     "imagePath": "penguin.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Pig",
-                     "imagePath": "pig.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Porcupine",
-                     "imagePath": "porcupine.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Rabbit",
-                     "imagePath": "rabbit.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Raccoon",
-                     "imagePath": "raccoon.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Rat",
-                     "imagePath": "rat.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Scorpion",
-                     "imagePath": "scorpion.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Sheep",
-                     "imagePath": "sheep.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Snake",
-                     "imagePath": "snake.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Squirrel",
-                     "imagePath": "squirrel.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Tiger",
-                     "imagePath": "tiger.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Wolf",
-                     "imagePath": "wolf.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Zebra",
-                     "imagePath": ".png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Clownfish",
-                     "imagePath": "clownfish.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Hermit Crab",
-                     "imagePath": "hermit crab.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Jellyfish",
-                     "imagePath": "jellyfish.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Sea Horse",
-                     "imagePath": "sea horse.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Seagull",
-                     "imagePath": "seagull.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Seal",
-                     "imagePath": "seal.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Squid",
-                     "imagePath": "squid.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Starfish",
-                     "imagePath": "starfish.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Turtle",
-                     "imagePath": "turtle.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Whale",
-                     "imagePath": "whale.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     ]
-  },
-  {
-		"categoryName": "Fruits",
-		"isPlayed": false,
-		"wordList": [
-                     {
-                     "vocabulary": "Apple",
-                     "imagePath": "apple.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Banana",
-                     "imagePath": "banana.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Broccoli",
-                     "imagePath": "broccoli.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Beetroot",
-                     "imagePath": "beetroot.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Calabash",
-                     "imagePath": "calabash.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Carrot",
-                     "imagePath": "carrot.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Cherry",
-                     "imagePath": "cherry.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Chinese Pear",
-                     "imagePath": "chinese pear.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Coconut",
-                     "imagePath": "coconut.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Corn",
-                     "imagePath": "corn.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Eggplant",
-                     "imagePath": "eggplant.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Garlic",
-                     "imagePath": "garlic.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Grape",
-                     "imagePath": "grape.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Kiwi",
-                     "imagePath": "kiwi.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Lemon",
-                     "imagePath": "lemon.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Mushroom",
-                     "imagePath": "mushroom.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Onion",
-                     "imagePath": "onion.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Orange",
-                     "imagePath": "ornage.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Pineapple",
-                     "imagePath": "pineapple.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Pumpkin",
-                     "imagePath": "pumpkin.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Spring Onion",
-                     "imagePath": "spring onion.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Strawberry",
-                     "imagePath": "strawberry.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Sweet Pepper",
-                     "imagePath": "sweet pepper.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     {
-                     "vocabulary": "Tomato",
-                     "imagePath": "tomato.png",
-                     "failed": 0,
-                     "isLocked": false
-                     },
-                     ]
-  }
-  ]
+[
+ {
+ "categoryName": "Animals",
+ "isLocked": false,
+ "wordList": [
+              {
+              "vocabulary": "Cat",
+              "imagePath": "cat.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Dog",
+              "imagePath": "dog.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Bear",
+              "imagePath": "bear.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Boar",
+              "imagePath": "boar.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Bear",
+              "imagePath": "bear.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Camel",
+              "imagePath": "camel.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Chick",
+              "imagePath": "chick.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Cock",
+              "imagePath": "cock.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Cow",
+              "imagePath": "cow.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Deer",
+              "imagePath": "deer.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Donkey",
+              "imagePath": "donkey.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Elephant",
+              "imagePath": "elephant.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Gibbon",
+              "imagePath": "gibbon.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Hamsters",
+              "imagePath": "hamsters.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Hawk",
+              "imagePath": "hawk.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Hen",
+              "imagePath": "hen.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Horse",
+              "imagePath": "horse.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "King Kong",
+              "imagePath": "king kong.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Koala",
+              "imagePath": "koala.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Leopard",
+              "imagePath": "leopard.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Lion",
+              "imagePath": "lion.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Monkey",
+              "imagePath": "monkey.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Owl",
+              "imagePath": "owl.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Panda",
+              "imagePath": "panda.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Parrot",
+              "imagePath": "parrot.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Penguin",
+              "imagePath": "penguin.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Pig",
+              "imagePath": "pig.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Porcupine",
+              "imagePath": "porcupine.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Rabbit",
+              "imagePath": "rabbit.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Raccoon",
+              "imagePath": "raccoon.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Rat",
+              "imagePath": "rat.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Scorpion",
+              "imagePath": "scorpion.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Sheep",
+              "imagePath": "sheep.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Snake",
+              "imagePath": "snake.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Squirrel",
+              "imagePath": "squirrel.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Tiger",
+              "imagePath": "tiger.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Wolf",
+              "imagePath": "wolf.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Zebra",
+              "imagePath": ".png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Clownfish",
+              "imagePath": "clownfish.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Hermit Crab",
+              "imagePath": "hermit crab.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Jellyfish",
+              "imagePath": "jellyfish.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Sea Horse",
+              "imagePath": "sea horse.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Seagull",
+              "imagePath": "seagull.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Seal",
+              "imagePath": "seal.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Squid",
+              "imagePath": "squid.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Starfish",
+              "imagePath": "starfish.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Turtle",
+              "imagePath": "turtle.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Whale",
+              "imagePath": "whale.png",
+              "failed": 0,
+              "isFound": false
+              },
+              ]
+ },
+ {
+ "categoryName": "Fruits",
+ "isLocked": false,
+ "wordList": [
+              {
+              "vocabulary": "Apple",
+              "imagePath": "apple.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Banana",
+              "imagePath": "banana.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Broccoli",
+              "imagePath": "broccoli.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Beetroot",
+              "imagePath": "beetroot.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Calabash",
+              "imagePath": "calabash.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Carrot",
+              "imagePath": "carrot.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Cherry",
+              "imagePath": "cherry.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Chinese Pear",
+              "imagePath": "chinese pear.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Coconut",
+              "imagePath": "coconut.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Corn",
+              "imagePath": "corn.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Eggplant",
+              "imagePath": "eggplant.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Garlic",
+              "imagePath": "garlic.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Grape",
+              "imagePath": "grape.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Kiwi",
+              "imagePath": "kiwi.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Lemon",
+              "imagePath": "lemon.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Mushroom",
+              "imagePath": "mushroom.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Onion",
+              "imagePath": "onion.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Orange",
+              "imagePath": "ornage.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Pineapple",
+              "imagePath": "pineapple.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Pumpkin",
+              "imagePath": "pumpkin.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Spring Onion",
+              "imagePath": "spring onion.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Strawberry",
+              "imagePath": "strawberry.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Sweet Pepper",
+              "imagePath": "sweet pepper.png",
+              "failed": 0,
+              "isFound": false
+              },
+              {
+              "vocabulary": "Tomato",
+              "imagePath": "tomato.png",
+              "failed": 0,
+              "isFound": false
+              },
+              ]
+ }
+ ]
