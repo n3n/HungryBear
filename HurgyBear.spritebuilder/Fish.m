@@ -12,6 +12,12 @@
     CCLabelTTF *alphabetLabel;
 }
 
-
+- (instancetype)initWithRandomAlphabet {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 
 @end
