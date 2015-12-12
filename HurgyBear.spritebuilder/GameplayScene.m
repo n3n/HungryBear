@@ -14,6 +14,12 @@
 @implementation GameplayScene {
     NSMutableSet<CCNode *> *objectList;
     CCSprite *yellowFish;
+    CCNode *hookRaise;
+    CCNode *hookDown;
+    CCLabelTTF *timeLabel;
+    CCLabelTTF *scoreLabel;
+    CCLabelTTF *minusTimeLabel;
+    CCLabelTTF *plusTimeLabel;
 }
 
 - (void)didLoadFromCCB {
@@ -33,11 +39,7 @@
     CGPoint touchLocation = [self convertToNodeSpace:[touch locationInNode:self]];
     CCNode *targetNode = [self getNodeByTouchLocation:touchLocation];
     
-    CCNode *hookDown = [self getChildByName:@"Hook_Down_Pic" recursively:YES];
-    hookDown.visible = NO;
-    CCNode *hookRaise = [self getChildByName:@"Hook_Raise_Pic" recursively:YES];
-    hookRaise.visible = YES;
-    
+    [self touchForFishing:YES];
     
 //    CGSize location = [[CCDirector sharedDirector] viewSize];
 //    id move = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(0, location.height/2)];
@@ -46,24 +48,14 @@
     
 }
 
-- (void)touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
-    CCLOG(@"Cancelled");
-    if (self.isPaused) return;
-    
-    CCNode *hookDown = [self getChildByName:@"Hook_Down_Pic" recursively:YES];
-    hookDown.visible = YES;
-    CCNode *hookRaise = [self getChildByName:@"Hook_Raise_Pic" recursively:YES];
-    hookRaise.visible = NO;
-}
-
 - (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
     if (self.isPaused) return;
-    
-    CCLOG(@"Ended");
-    CCNode *hookDown = [self getChildByName:@"Hook_Down_Pic" recursively:YES];
-    hookDown.visible = YES;
-    CCNode *hookRaise = [self getChildByName:@"Hook_Raise_Pic" recursively:YES];
-    hookRaise.visible = NO;
+    [self touchForFishing:NO];
+}
+
+- (void)touchForFishing:(BOOL)toggle {
+    hookDown.visible = !toggle;
+    hookRaise.visible = toggle;
 }
 
 - (void)setupData {
@@ -98,16 +90,6 @@
 - (void)skipButtonTapped {
     if (self.isPaused) return;
     CCLOG(@"Skipp ButtonTapped!!");
-}
-
-- (void)resetButtonTapped {
-    if (self.isPaused) return;
-    CCLOG(@"Reset ButtonTapped!!");
-}
-
-- (void)deleteButtonTapped {
-    if (self.isPaused) return;
-    CCLOG(@"Delete ButttonTapped!!");
 }
 
 - (void)soundButtonTapped {

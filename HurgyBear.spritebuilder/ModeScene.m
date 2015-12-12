@@ -27,4 +27,9 @@
     [SceneManager loadScene:@"Categories"];
 }
 
+- (void)modeButtonTapped {
+    
+    CCLOG(@"MODE TAPPED!!!");
+}
+
 @end
