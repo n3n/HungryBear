@@ -18,6 +18,7 @@ extern const NSString *kFailed;
 @property (nonatomic, copy)NSString *vocabulary;
 @property (nonatomic, copy)NSString *imagePath;
 @property (nonatomic, readonly)NSArray *arrayOfCharacter;
+@property (readonly)NSUInteger length;
 @property NSInteger failedCount;
 @property BOOL isFound;
 //@property (nonatomic, strong) *image;

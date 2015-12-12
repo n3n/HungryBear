@@ -20,6 +20,7 @@ extern const NSString *kWordList;
 @property (readonly, strong)NSArray<Word *> *wordList;
 @property (nonatomic)BOOL isLocked;
 
+- (NSArray *)wordListByMode:(NSInteger)mode;
 - (Word *)wordAtIndex:(NSInteger)index;
 @property NSInteger stars;
 @property NSInteger highScore;

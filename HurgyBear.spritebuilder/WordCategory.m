@@ -54,4 +54,30 @@ const NSString *kWordList = @"wordList";
 - (Word *)wordAtIndex:(NSInteger)index {
     return words[index];
 }
+
+- (NSArray *)wordListByMode:(NSInteger)mode {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (Word *word in words) {
+        switch (mode) {
+            case 1:
+                if(word.length >= 3 && word.length <= 5) {
+                    [array addObject:word];
+                }
+                break;
+            case 2:
+                if(word.length >= 6 && word.length <= 8) {
+                    [array addObject:word];
+                }
+                break;
+            case 3:
+                if(word.length >= 9) {
+                    [array addObject:word];
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    return array;
+}
 @end
