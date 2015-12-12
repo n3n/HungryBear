@@ -13,6 +13,22 @@
     NSArray<WordCategory *> *_categories;
 }
 
++ (instancetype)sharedInstance {
+    static CategoryList *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[CategoryList alloc] init];
+    });
+    return sharedInstance;
+}
 
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
+}
 
 @end
