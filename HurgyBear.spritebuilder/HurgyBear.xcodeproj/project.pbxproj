@@ -320,10 +320,10 @@
 			children = (
 				079D1BF31C1A9B980003575A /* SceneManager.h */,
 				079D1BF41C1A9B980003575A /* SceneManager.m */,
-				079D1C061C1AA5630003575A /* GameplayScene.h */,
-				079D1C071C1AA5630003575A /* GameplayScene.m */,
 				079D1BFA1C1A9E370003575A /* HowToPlayScene.h */,
 				079D1BFB1C1A9E370003575A /* HowToPlayScene.m */,
+				079D1C061C1AA5630003575A /* GameplayScene.h */,
+				079D1C071C1AA5630003575A /* GameplayScene.m */,
 				079D1C091C1ABC820003575A /* ModeScene.h */,
 				079D1C0A1C1ABC820003575A /* ModeScene.m */,
 				079D1C0C1C1ABDE90003575A /* CategoriesScene.h */,
@@ -336,8 +336,8 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				072174EE1C1B1709008086C5 /* Scene.h */,
 				072174EF1C1B1709008086C5 /* Scene.m */,
-				0770575F1C1BD419002D698B /* PauseScene.h */,
 				077057601C1BD419002D698B /* PauseScene.m */,
+				0770575F1C1BD419002D698B /* PauseScene.h */,
 			);
 			name = Scene;
 			sourceTree = "<group>";

@@ -7,11 +7,30 @@
 //
 
 #import "PauseScene.h"
+#import "GameplayScene.h"
 
 @implementation PauseScene
 
 - (void)resumeButtonTapped {
+    [self resumeGamePlayScene];
+
     CCLOG(@"Resume ButtonTapped");
+}
+
+- (void)restartButtonTapped {
+    CCLOG(@"Restart ButtonTapped");
+}
+
+- (void)mainMenuButtonTapped {
+    CCLOG(@"Main Menu ButtonTapped");
+}
+
+- (void)resumeGamePlayScene {
+    for(CCNode *child in [self.originalScene children]) {
+        child.paused = NO;
+    }
+    self.originalScene.isPaused = NO;
+    [self.originalScene removeChild:self];
 }
 
 @end

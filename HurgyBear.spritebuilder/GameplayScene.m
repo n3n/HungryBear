@@ -9,13 +9,16 @@
 #import "GameplayScene.h"
 #import "SceneManager.h"
 #import "YellowFish.h"
+#import "PauseScene.h"
 
 @implementation GameplayScene {
     NSMutableSet<CCNode *> *objectList;
+    CCSprite *yellowFish;
 }
 
 - (void)didLoadFromCCB {
     self.userInteractionEnabled = YES;
+    self.isPaused = NO;
     [self setupData];
 }
 
@@ -26,6 +29,12 @@
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
     CGPoint touchLocation = [self convertToNodeSpace:[touch locationInNode:self]];
     CCNode *targetNode = [self getNodeByTouchLocation:touchLocation];
+    
+//    CGSize location = [[CCDirector sharedDirector] viewSize];
+//    id move = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(0, location.height/2)];
+//    id actionSequence = [CCActionSequence actionWithArray:@[move, [move reverse]]];
+//    [yellowFish runAction:[CCActionRepeatForever actionWithAction:actionSequence]];
+    
 }
 
 - (void)touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
@@ -38,9 +47,17 @@
 
 - (void)setupData {
     objectList = [[NSMutableSet alloc] init];
+    self.isPaused = NO;
+    
+    yellowFish = [CCBReader load:@"YellowFish"];
+    CGSize location = [[CCDirector sharedDirector] viewSize];
+    
+    yellowFish.position = ccp(location.width/4, location.height/2);
+    [self addChild:yellowFish];
+    
 }
 
-- (void)addChild:(CCNode *)node {
+- (void)addGameObject:(CCNode *)node {
     [super addChild:node];
     [objectList addObject:node];
 }
@@ -75,8 +92,31 @@
 }
 
 - (void)pauseButtonTapped {
-    CCLOG(@"Pause ButtonTapped!!");
+    if (!self.isPaused) {
+
+        [self popupPasueScene];
+        [self pauseGamePlayScene];
+
+        
+        CCLOG(@"Pause ButtonTapped!!");
+        self.isPaused = YES;
+    }
 }
+
+-(void)pauseGamePlayScene {
+    for(CCNode *child in [self children]) {
+        child.paused = YES;
+    }
+}
+- (void)popupPasueScene {
+    PauseScene *pauseScene = (PauseScene *)[CCBReader load:@"Pause"];
+    pauseScene.originalScene = self;
+    pauseScene.positionType = CCPositionTypeNormalized;
+    pauseScene.position = ccp(0.0, 0.0);
+    pauseScene.zOrder = INT_MAX;
+    [self addChild:pauseScene];
+}
+
 
 
 
