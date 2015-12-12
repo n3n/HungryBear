@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		072174F01C1B1709008086C5 /* Scene.m in Sources */ = {isa = PBXBuildFile; fileRef = 072174EF1C1B1709008086C5 /* Scene.m */; settings = {ASSET_TAGS = (); }; };
+		072174F41C1B4A4F008086C5 /* Fish.m in Sources */ = {isa = PBXBuildFile; fileRef = 072174F31C1B4A4F008086C5 /* Fish.m */; settings = {ASSET_TAGS = (); }; };
+		072174FA1C1B55FC008086C5 /* CategoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = 072174F91C1B55FC008086C5 /* CategoryList.m */; settings = {ASSET_TAGS = (); }; };
+		072174FD1C1B5789008086C5 /* WordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 072174FC1C1B5789008086C5 /* WordList.m */; settings = {ASSET_TAGS = (); }; };
+		072175001C1B5790008086C5 /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 072174FF1C1B5790008086C5 /* Word.m */; settings = {ASSET_TAGS = (); }; };
+		072175031C1B58D0008086C5 /* WordCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 072175021C1B58D0008086C5 /* WordCategory.m */; settings = {ASSET_TAGS = (); }; };
 		079D1BF51C1A9B980003575A /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BF41C1A9B980003575A /* SceneManager.m */; };
 		079D1BFC1C1A9E370003575A /* HowToPlayScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFB1C1A9E370003575A /* HowToPlayScene.m */; };
 		079D1BFF1C1AA2470003575A /* HighscoreScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BFE1C1AA2470003575A /* HighscoreScene.m */; };
@@ -160,6 +165,16 @@
 /* Begin PBXFileReference section */
 		072174EE1C1B1709008086C5 /* Scene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scene.h; sourceTree = "<group>"; };
 		072174EF1C1B1709008086C5 /* Scene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scene.m; sourceTree = "<group>"; };
+		072174F21C1B4A4F008086C5 /* Fish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fish.h; sourceTree = "<group>"; };
+		072174F31C1B4A4F008086C5 /* Fish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fish.m; sourceTree = "<group>"; };
+		072174F81C1B55FC008086C5 /* CategoryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryList.h; sourceTree = "<group>"; };
+		072174F91C1B55FC008086C5 /* CategoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryList.m; sourceTree = "<group>"; };
+		072174FB1C1B5789008086C5 /* WordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordList.h; sourceTree = "<group>"; };
+		072174FC1C1B5789008086C5 /* WordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordList.m; sourceTree = "<group>"; };
+		072174FE1C1B5790008086C5 /* Word.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Word.h; sourceTree = "<group>"; };
+		072174FF1C1B5790008086C5 /* Word.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Word.m; sourceTree = "<group>"; };
+		072175011C1B58D0008086C5 /* WordCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCategory.h; sourceTree = "<group>"; };
+		072175021C1B58D0008086C5 /* WordCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCategory.m; sourceTree = "<group>"; };
 		079D1BF31C1A9B980003575A /* SceneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneManager.h; sourceTree = "<group>"; };
 		079D1BF41C1A9B980003575A /* SceneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneManager.m; sourceTree = "<group>"; };
 		079D1BFA1C1A9E370003575A /* HowToPlayScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HowToPlayScene.h; sourceTree = "<group>"; };
@@ -330,6 +345,16 @@
 			children = (
 				079D1C0F1C1AE7FA0003575A /* YellowFish.h */,
 				079D1C101C1AE7FB0003575A /* YellowFish.m */,
+				072174F21C1B4A4F008086C5 /* Fish.h */,
+				072174F31C1B4A4F008086C5 /* Fish.m */,
+				072175011C1B58D0008086C5 /* WordCategory.h */,
+				072175021C1B58D0008086C5 /* WordCategory.m */,
+				072174F81C1B55FC008086C5 /* CategoryList.h */,
+				072174F91C1B55FC008086C5 /* CategoryList.m */,
+				072174FB1C1B5789008086C5 /* WordList.h */,
+				072174FC1C1B5789008086C5 /* WordList.m */,
+				072174FE1C1B5790008086C5 /* Word.h */,
+				072174FF1C1B5790008086C5 /* Word.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -877,6 +902,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072174F41C1B4A4F008086C5 /* Fish.m in Sources */,
+				072175031C1B58D0008086C5 /* WordCategory.m in Sources */,
 				072174F01C1B1709008086C5 /* Scene.m in Sources */,
 				079D1C081C1AA5630003575A /* GameplayScene.m in Sources */,
 				079D1C021C1AA25E0003575A /* StampbookScene.m in Sources */,
@@ -886,7 +913,10 @@
 				079D1C0B1C1ABC830003575A /* ModeScene.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				079D1BF51C1A9B980003575A /* SceneManager.m in Sources */,
+				072174FA1C1B55FC008086C5 /* CategoryList.m in Sources */,
 				079D1C111C1AE7FB0003575A /* YellowFish.m in Sources */,
+				072175001C1B5790008086C5 /* Word.m in Sources */,
+				072174FD1C1B5789008086C5 /* WordList.m in Sources */,
 				079D1BFC1C1A9E370003575A /* HowToPlayScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
