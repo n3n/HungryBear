@@ -10,4 +10,9 @@
 
 @implementation Scene
 
+- (void)didLoadFromCCB {
+    
+}
+
+
 @end

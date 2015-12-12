@@ -11,6 +11,10 @@
 
 @implementation HowToPlayScene
 
+- (void)didLoadFromCCB {
+    
+}
+
 - (void)mainMenuButtonTapped {
     [SceneManager loadScene:@"MainScene"];
 }

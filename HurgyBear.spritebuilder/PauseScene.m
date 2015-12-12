@@ -12,6 +12,10 @@
 
 @implementation PauseScene
 
+- (void)didLoadFromCCB {
+    
+}
+
 - (void)resumeButtonTapped {
     [self resumeGamePlayScene];
     CCLOG(@"Resume ButtonTapped");
