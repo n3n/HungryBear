@@ -336,8 +336,8 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				072174EE1C1B1709008086C5 /* Scene.h */,
 				072174EF1C1B1709008086C5 /* Scene.m */,
-				077057601C1BD419002D698B /* PauseScene.m */,
 				0770575F1C1BD419002D698B /* PauseScene.h */,
+				077057601C1BD419002D698B /* PauseScene.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
