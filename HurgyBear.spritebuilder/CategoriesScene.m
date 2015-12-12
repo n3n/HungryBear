@@ -7,12 +7,19 @@
 //
 
 #import "CategoriesScene.h"
+#import "CategoryList.h"
 #import "SceneManager.h"
 
-@implementation CategoriesScene
+@implementation CategoriesScene {
+    CategoryList *categoryList;
+}
 
 - (void)didLoadFromCCB {
-    
+    [self setupData];
+}
+
+- (void)setupData {
+    categoryList = [CategoryList sharedInstance];
 }
 
 - (void)modeButtonTapped {

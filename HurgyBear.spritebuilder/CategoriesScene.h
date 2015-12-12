@@ -10,5 +10,5 @@
 #import "Scene.h"
 
 @interface CategoriesScene : Scene
-
+@property NSInteger mode;
 @end

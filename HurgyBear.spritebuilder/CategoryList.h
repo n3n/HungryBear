@@ -16,6 +16,7 @@
 - (WordCategory *)categoryAtIndex:(NSInteger)index;
 - (WordCategory *)categoryByCategoryName:(NSString *)categoryName;
 
+@property NSInteger mode;
 
 // Initialize Method
 - (instancetype)initWithDefaultData;

@@ -8,7 +8,14 @@
 
 #import "ModeScene.h"
 #import "SceneManager.h"
+#import "CategoriesScene.h"
 #import "CategoryList.h"
+
+enum MODE{
+    EASY = 1,
+    NORMAL = 2,
+    HARD = 3
+};
 
 @implementation ModeScene {
     CategoryList *categoryList;
@@ -16,6 +23,7 @@
 
 - (void)didLoadFromCCB {
     categoryList = [CategoryList sharedInstance];
+    CCLOG(@"hell mode scene");
 }
 
 - (void)mainMenuButtonTapped {
@@ -23,20 +31,20 @@
 }
 
 - (void)easyButtonTapped {
-    [SceneManager loadScene:@"Categories"];
+    [self selectMode:EASY];
 }
 
 - (void)normalButtonTapped {
-    [SceneManager loadScene:@"Categories"];
+    [self selectMode:NORMAL];
 }
 
 - (void)hardButtonTapped {
-    [SceneManager loadScene:@"Categories"];
+    [self selectMode:HARD];
 }
 
-- (void)modeButtonTapped {
-    
-    CCLOG(@"MODE TAPPED!!!");
+- (void)selectMode:(NSInteger)mode {
+    categoryList.mode = mode;
+    [SceneManager loadScene:@"Categories"];
 }
 
 @end
