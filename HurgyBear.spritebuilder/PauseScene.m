@@ -8,6 +8,7 @@
 
 #import "PauseScene.h"
 #import "GameplayScene.h"
+#import "SceneManager.h"
 
 @implementation PauseScene
 
@@ -18,10 +19,12 @@
 }
 
 - (void)restartButtonTapped {
+    [SceneManager loadScene:@"Gameplay"];
     CCLOG(@"Restart ButtonTapped");
 }
 
 - (void)mainMenuButtonTapped {
+    [SceneManager loadScene:@"MainScene"];
     CCLOG(@"Main Menu ButtonTapped");
 }
 
