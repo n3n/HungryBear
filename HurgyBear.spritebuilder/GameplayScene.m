@@ -72,6 +72,8 @@ const static NSInteger START_TIMER = 180;
 - (void)setupConfig {
     self.userInteractionEnabled = YES;
     self.isPaused = NO;
+
+    
 }
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
@@ -82,7 +84,38 @@ const static NSInteger START_TIMER = 180;
 //    CCNode *targetNode = [self getNodeByTouchLocation:touchLocation];
     
     [self touchForFishing:YES];
+    
+    [self minusTime];
+
+//    [self wordCheck];
+    
 }
+
+
+- (void)plusTime {
+    plusTimeLabel.visible = YES;
+    id fade = [self runActionFade];
+    [plusTimeLabel runAction:fade];
+}
+
+- (void)minusTime {
+    minusTimeLabel.visible = YES;
+    id fade = [self runActionFade];
+    [minusTimeLabel runAction:fade];
+}
+
+- (id)runActionFade {
+    id sequence = [CCActionSequence actionWithArray:
+                   @[[CCActionFadeIn actionWithDuration:1],
+                     [CCActionFadeOut actionWithDuration:1]
+                     ]
+                   ];
+    return sequence;
+    
+}
+
+
+
 
 - (void)move {
 //        CGSize location = [[CCDirector sharedDirector] viewSize];
@@ -94,6 +127,8 @@ const static NSInteger START_TIMER = 180;
 - (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
     if (self.isPaused) return;
     [self touchForFishing:NO];
+    
+//    [self minusTime];
 }
 
 - (void)touchForFishing:(BOOL)toggle {
