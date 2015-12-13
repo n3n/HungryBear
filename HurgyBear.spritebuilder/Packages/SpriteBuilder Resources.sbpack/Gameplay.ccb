@@ -3293,7 +3293,7 @@
 				<key>type</key>
 				<string>StringSimple</string>
 				<key>value</key>
-				<string></string>
+				<string>gamplay</string>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -3347,6 +3347,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
