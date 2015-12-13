@@ -106,7 +106,7 @@ const static NSInteger START_TIMER = 180;
 
 - (id)runActionFade {
     id sequence = [CCActionSequence actionWithArray:
-                   @[[CCActionFadeIn actionWithDuration:1],
+                   @[[CCActionFadeIn actionWithDuration:0],
                      [CCActionFadeOut actionWithDuration:1]
                      ]
                    ];
