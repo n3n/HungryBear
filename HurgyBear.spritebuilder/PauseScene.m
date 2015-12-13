@@ -31,6 +31,7 @@
 - (void)mainMenuButtonTapped {
     [SceneManager loadScene:@"MainScene"];
     CCLOG(@"Main Menu ButtonTapped");
+    [OALSimpleAudio sharedInstance].effectsPaused = YES;
 }
 
 - (void)resumeGamePlayScene {

@@ -5,7 +5,7 @@
 	<key>filenames</key>
 	<dict>
 		<key>GameUI/Audios/gameOver2.wav</key>
-		<string>GameUI/Audios/gameOver2.caf</string>
+		<string>GameUI/Audios/gameOver2.m4a</string>
 		<key>GameUI/Audios/gamePlay.wav</key>
 		<string>GameUI/Audios/gamePlay.m4a</string>
 		<key>GameUI/Audios/menu.wav</key>

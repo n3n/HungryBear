@@ -15,9 +15,8 @@
     if(!audio.bgPlaying) {
         [self playMusic];
     }else if(audio.bgPaused) {
-        [audio playBg];
+        [self playMusic];
     }
-
 }
 
 - (void)playMusic {

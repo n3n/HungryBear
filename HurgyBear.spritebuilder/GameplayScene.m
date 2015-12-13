@@ -40,7 +40,6 @@ const static NSInteger START_TIMER = 180;
                                           pitch:1.0
                                             pan:0.0
                                            loop:YES];
-    
 }
 
 - (void)startGame {
