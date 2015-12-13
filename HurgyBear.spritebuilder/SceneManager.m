@@ -12,7 +12,7 @@
 @implementation SceneManager
 
 + (CCScene *)loadScene:(NSString *)sceneName {
-    CCScene *gameScene = (CCScene *)[CCBReader loadAsScene:sceneName];
+    CCScene *gameScene = [CCBReader loadAsScene:sceneName];
     [[CCDirector sharedDirector] replaceScene:gameScene];
     return gameScene;
 }
