@@ -14,6 +14,7 @@
 @property (readonly)Word *currentWord;
 
 - (CCNode *)getNodeByTouchLocation:(CGPoint)touchLocation;
+- (void)processTouchLocation:(CGPoint)touchLocation;
 - (instancetype)initWithScene:(CCScene *)scene;
 - (void)skipWord;
 

@@ -20,4 +20,29 @@
     return self;
 }
 
+- (instancetype)initWithAlphabet:(NSString *)inAlphabet {
+    self = [super init];
+    if (self) {
+        self.alphabet = inAlphabet;
+        alphabetLabel.string = self.alphabet;
+    }
+    return self;
+}
+
+- (void)configureWithAlphabet:(NSString *)alpha{
+    self.alphabet = alpha;
+    alphabetLabel.string = self.alphabet.uppercaseString;
+}
+
+- (void)flipX:(BOOL)toggle {
+    for (CCSprite *node in self.children) {
+        node.flipX = toggle;
+    }
+}
+
+- (void)flipY:(BOOL)toggle {
+    for (CCSprite *node in self.children) {
+        node.flipY = toggle;
+    }
+}
 @end

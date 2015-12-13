@@ -227,7 +227,7 @@
               },
               {
               "vocabulary": "Zebra",
-              "imagePath": ".png",
+              "imagePath": "zebra.png",
               "failed": 0,
               "isFound": false
               },

@@ -10,6 +10,10 @@
 
 @interface Fish : CCSprite
 
+@property (nonatomic, copy)NSString *alphabet;
 - (instancetype)initWithRandomAlphabet;
+- (instancetype)initWithAlphabet:(NSString *)alphabet;
+- (void)configureWithAlphabet:(NSString *)alpha;
+
 
 @end

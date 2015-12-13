@@ -18,7 +18,7 @@ const static NSInteger START_TIMER = 180;
 @implementation GameplayScene {
     GameplayModel *model;
     CCNode *hookRaise;
-    CCNode *wordImage;
+    CCSprite *wordImage;
     CCNode *hookDown;
     CCLabelTTF *timeLabel;
     CCLabelTTF *scoreLabel;
@@ -53,42 +53,34 @@ const static NSInteger START_TIMER = 180;
 - (void)setupData {
     model = [[GameplayModel alloc] initWithScene:self];
     blankSpaces = [[NSMutableArray alloc] init];
-//    YellowFish *yellowFish = (YellowFish *)[CCBReader load:@"YellowFish"];
-//    NSLog(@"%@",yellowFish.texture);
-//        CGSize location = [[CCDirector sharedDirector] viewSize];
-//        yellowFish.position = ccp(location.width/4, location.height/2);
-//    
-//        [self addChild:yellowFish];
-//
-    
-//    CCSpriteFrameCache *frameCache = [CCSpriteFrameCache sharedSpriteFrameCache];
-//    CCSpriteFrame *frame = [frameCache spriteFrameByName:@"FishBlueBig1.png"];
-//    CCLOG(@"%@", frame);
-    
 }
 
 - (void)setupConfig {
     self.userInteractionEnabled = YES;
     self.isPaused = NO;
-
-    
 }
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
     if(self.isPaused) return;
+
     CCLOG(@"Touch Began");
     
     CGPoint touchLocation = [self convertToNodeSpace:[touch locationInNode:self]];
-//    CCNode *targetNode = [self getNodeByTouchLocation:touchLocation];
+//    CCNode *targetNode = [model getNodeByTouchLocation:touchLocation];
+    [model processTouchLocation:touchLocation];
+//    if (!targetNode) return;
     
     [self touchForFishing:YES];
-    
-    [self minusTime];
 
 //    [self wordCheck];
-    
 }
 
+- (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
+    if (self.isPaused) return;
+    [self touchForFishing:NO];
+    
+    //    [self minusTime];
+}
 
 - (void)plusTime {
     plusTimeLabel.visible = YES;
@@ -121,13 +113,6 @@ const static NSInteger START_TIMER = 180;
 //        [yellowFish runAction:[CCActionRepeatForever actionWithAction:actionSequence]];
 }
 
-- (void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
-    if (self.isPaused) return;
-    [self touchForFishing:NO];
-    
-//    [self minusTime];
-}
-
 - (void)touchForFishing:(BOOL)toggle {
     hookDown.visible = !toggle;
     hookRaise.visible = toggle;
@@ -141,7 +126,6 @@ const static NSInteger START_TIMER = 180;
 - (void)randomWord {
     [model skipWord];
     CCLOG(@"Skip is tapped. | Word: %@", model.currentWord.vocabulary);
-    [self clearBlankSpace];
     [self drawBlankSpace:(int)model.currentWord.length];
     [self redrawWordImage];
 }
@@ -191,18 +175,18 @@ const static NSInteger START_TIMER = 180;
 }
 
 - (void)redrawWordImage {
-    const CGPoint POS = CGPointMake(50.0, 302.0);
-    NSString *imagePath = [NSString stringWithFormat:@"GameUI/Vocabulary/%@", model.currentWord.imagePath];
-    CCSprite *node = [CCSprite spriteWithImageNamed:imagePath];
-    node.anchorPoint = CGPointMake(0.5f, 0.5f);
-    node.position = ccp(POS.x , POS.y);
-    [blankSpaces addObject:node];
-    [self addChild:node];
+    [self removeChild:wordImage];
+    CCSprite *node = [CCSprite spriteWithImageNamed:[NSString stringWithFormat:@"GameUI/Vocabulary/%@", model.currentWord.imagePath]];
+    node.anchorPoint = wordImage.anchorPoint;
+    node.position = wordImage.position;
+    wordImage = node;
+    [self addChild:wordImage];
 }
 
 - (void)drawBlankSpace:(int)length {
     const CGPoint POS = CGPointMake(80, 282.0);
     const CGFloat MARGIN = 25.0;
+    [self clearBlankSpace];
     for(int i=1; i<=length; i++) {
         CCSprite *node = [CCSprite spriteWithImageNamed:@"GameUI/Fishing/PlayGame/Assets/PlayGame_Blank.png"];
         node.anchorPoint = CGPointMake(0.5f, 0.5f);
