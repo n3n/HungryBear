@@ -22,7 +22,7 @@
 
 - (void)playMusic {
     [audio playBg:@"GameUI/Audios/menu.m4a" loop:YES];
-    audio.bgVolume = 0.1;
+    audio.bgVolume = 0.2;
 }
 
 - (void)fishingButtonTapped {
