@@ -36,20 +36,18 @@ const static NSInteger START_TIMER = 180;
 
 - (void)startGame {
     time = START_TIMER;
-    timeLabel.string = [[NSString alloc] initWithFormat:@"%d", time];
     scoreLabel.string = @"0";
     [self schedule:@selector(gameTimer) interval:1];
+    [self randomWord];
+}
+
+- (void)updateTime {
+    timeLabel.string = [NSString stringWithFormat:@"%d", time];
 }
 
 - (void)gameTimer {
-    time -= 30;
-    timeLabel.string = [NSString stringWithFormat:@"%d", time];
+    time -= 1;
     NSLog(@"Time: %d", time);
-    
-    if(time <= 0) {
-        NSLog(@"Timeout!");
-        [self gameOver];
-    }
 }
 
 - (void)setupData {
@@ -96,12 +94,14 @@ const static NSInteger START_TIMER = 180;
     plusTimeLabel.visible = YES;
     id fade = [self runActionFade];
     [plusTimeLabel runAction:fade];
+    time += 10;
 }
 
 - (void)minusTime {
     minusTimeLabel.visible = YES;
     id fade = [self runActionFade];
     [minusTimeLabel runAction:fade];
+    time -= 5;
 }
 
 - (id)runActionFade {
@@ -113,9 +113,6 @@ const static NSInteger START_TIMER = 180;
     return sequence;
     
 }
-
-
-
 
 - (void)move {
 //        CGSize location = [[CCDirector sharedDirector] viewSize];
@@ -138,12 +135,15 @@ const static NSInteger START_TIMER = 180;
 
 - (void)skipButtonTapped {
     if (self.isPaused) return;
+    [self randomWord];
+}
+
+- (void)randomWord {
     [model skipWord];
-    Word *word = [model currentWord];
-    CCLOG(@"Skip is tapped. | Word: %@", word.vocabulary);
+    CCLOG(@"Skip is tapped. | Word: %@", model.currentWord.vocabulary);
     [self clearBlankSpace];
-    [self drawBlankSpace:(int)word.length];
-    
+    [self drawBlankSpace:(int)model.currentWord.length];
+    [self redrawWordImage];
 }
 
 - (void)soundButtonTapped {
@@ -178,7 +178,11 @@ const static NSInteger START_TIMER = 180;
 }
 
 - (void)update:(CCTime)delta {
-    
+    if(time <= 0) {
+        NSLog(@"Timeout!");
+        [self gameOver];
+    }
+    [self updateTime];
 }
 
 - (void)gameOver {
@@ -186,8 +190,14 @@ const static NSInteger START_TIMER = 180;
     NSLog(@"Game Over");
 }
 
-- (void)drawWordImage {
-//    model.currentWord;
+- (void)redrawWordImage {
+    const CGPoint POS = CGPointMake(50.0, 302.0);
+    NSString *imagePath = [NSString stringWithFormat:@"GameUI/Vocabulary/%@", model.currentWord.imagePath];
+    CCSprite *node = [CCSprite spriteWithImageNamed:imagePath];
+    node.anchorPoint = CGPointMake(0.5f, 0.5f);
+    node.position = ccp(POS.x , POS.y);
+    [blankSpaces addObject:node];
+    [self addChild:node];
 }
 
 - (void)drawBlankSpace:(int)length {
