@@ -57,15 +57,29 @@
     if(!node) return;
     if(![self hasAlphabet:node.alphabet]) return;
     if([self alphabetIsOver:node.alphabet]) return;
-
+    
+    CCLOG(@"Touch fished : [%@]", node.alphabet);
+    
     NSString *alpha = [[NSString alloc] initWithString:node.alphabet];
     int index = [self getLastestIndex:alpha];
     arrayOfCharacter[index] = alpha.uppercaseString;
-    NSLog(@"Alphabet is %@ | index: %d | %@", alpha, index, arrayOfCharacter);
 
+    id sequence = [CCActionFadeIn actionWithDuration:1];
+    
+    [node runAction:sequence];
+    
     
     [gameplayScene removeChild:node];
     [objectList removeObject:node];
+    
+    gameplayScene.score += 25;
+    
+    NSString * result = [[arrayOfCharacter valueForKey:@"description"] componentsJoinedByString:@""];
+    NSLog(@"%@ == %@", result, self.currentWord.vocabulary);
+    if([self.currentWord isCorrect:result]) {
+        [gameplayScene randomWord];
+    }
+    [gameplayScene drawArrayOfCharacter];
     node = nil;
 }
 
@@ -91,7 +105,7 @@
 - (NSInteger)countAlphabetOfString:(NSString *)string alphabet:(NSString *)alpha {
     NSInteger count = 0;
     for (int i=0; i<string.length; i++) {
-        if([string characterAtIndex:i] == [alpha characterAtIndex:0]) {
+        if([string.lowercaseString characterAtIndex:i] == [alpha.lowercaseString characterAtIndex:0]) {
             count++;
         }
     }
@@ -120,7 +134,6 @@
 - (CGPoint)randomPosition {
     int x = arc4random() % 500;
     int y = 45 + arc4random() % 190;
-    NSLog(@"Position: (%d, %d)", x, y);
     return CGPointMake(x, y);
 }
 
@@ -145,21 +158,22 @@
 }
 
 - (BOOL)hasAlphabet:(NSString *)alpha {
-    return [self.currentWord.vocabulary containsString:alpha];
+    return [self.currentWord.vocabulary.lowercaseString containsString:alpha.lowercaseString];
 }
 
 - (void)skipWord {
     [self clearFishes];
     currentIndex = arc4random_uniform((u_int32_t)wordList.count);
-    NSLog(@"Random number: %d", currentIndex);
-    
     arrayOfCharacter = [[NSMutableArray alloc] init];
     for(int i=0; i<self.currentWord.length; i++) [arrayOfCharacter addObject:@"1"];
     
     for (NSString *character in self.currentWord.arrayOfCharacter) {
         [self createNewFish:character];
     }
+}
 
+- (NSArray *)arrayOfCharacter {
+    return arrayOfCharacter;
 }
 
 @end

@@ -27,7 +27,7 @@ const NSString *kFailed = @"failed";
 }
 
 - (BOOL)isCorrect:(NSString *)otherWord {
-    return [self.vocabulary isEqualToString:otherWord];
+    return [self.vocabulary.lowercaseString isEqualToString:otherWord.lowercaseString];
 }
 
 - (NSArray *)suffleArrayOfCharacter {

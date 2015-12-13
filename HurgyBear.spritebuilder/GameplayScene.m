@@ -25,6 +25,7 @@ const static NSInteger START_TIMER = 180;
     CCLabelTTF *minusTimeLabel;
     CCLabelTTF *plusTimeLabel;
     NSMutableArray *blankSpaces;
+    NSMutableArray *characterArray;
     int time;
 }
 
@@ -35,6 +36,7 @@ const static NSInteger START_TIMER = 180;
 }
 
 - (void)startGame {
+    self.score = 0;
     time = START_TIMER;
     scoreLabel.string = @"0";
     [self schedule:@selector(gameTimer) interval:1];
@@ -47,12 +49,12 @@ const static NSInteger START_TIMER = 180;
 
 - (void)gameTimer {
     time -= 1;
-    NSLog(@"Time: %d", time);
 }
 
 - (void)setupData {
     model = [[GameplayModel alloc] initWithScene:self];
     blankSpaces = [[NSMutableArray alloc] init];
+    characterArray = [[NSMutableArray alloc] init];
 }
 
 - (void)setupConfig {
@@ -62,13 +64,9 @@ const static NSInteger START_TIMER = 180;
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
     if(self.isPaused) return;
-
-    CCLOG(@"Touch Began");
     
     CGPoint touchLocation = [self convertToNodeSpace:[touch locationInNode:self]];
-//    CCNode *targetNode = [model getNodeByTouchLocation:touchLocation];
     [model processTouchLocation:touchLocation];
-//    if (!targetNode) return;
     
     [self touchForFishing:YES];
 
@@ -125,7 +123,7 @@ const static NSInteger START_TIMER = 180;
 
 - (void)randomWord {
     [model skipWord];
-    CCLOG(@"Skip is tapped. | Word: %@", model.currentWord.vocabulary);
+    [self clearArrayOfCharacter];
     [self drawBlankSpace:(int)model.currentWord.length];
     [self redrawWordImage];
 }
@@ -161,12 +159,18 @@ const static NSInteger START_TIMER = 180;
     [self addChild:pauseScene];
 }
 
+- (void)updateScore {
+    scoreLabel.string = [NSString stringWithFormat:@"%d", self.score];
+}
+
 - (void)update:(CCTime)delta {
     if(time <= 0) {
         NSLog(@"Timeout!");
         [self gameOver];
     }
+    [self updateScore];
     [self updateTime];
+    
 }
 
 - (void)gameOver {
@@ -201,6 +205,28 @@ const static NSInteger START_TIMER = 180;
         [self removeChild:node];
     }
     blankSpaces = [[NSMutableArray alloc] init];
+}
+
+- (void)drawArrayOfCharacter {
+    [self clearArrayOfCharacter];
+    const CGPoint POS = CGPointMake(105, 290.0);
+    for(int i=0; i<model.arrayOfCharacter.count; i++){
+        NSString *character = model.arrayOfCharacter[i];
+        if([character isEqualToString:@"1"]) continue;
+        CCLabelTTF *charLabel = [CCLabelTTF node];
+        charLabel.anchorPoint = CGPointMake(0.5f, 0.5f);
+        charLabel.position = ccp(POS.x + (25.0 * i), POS.y);
+        charLabel.string = character;
+        [self addChild:charLabel];
+        [characterArray addObject:charLabel];
+    }
+}
+
+- (void)clearArrayOfCharacter {
+    for (CCNode *node in characterArray) {
+        [self removeChild:node];
+    }
+    [characterArray removeAllObjects];
 }
 
 @end
