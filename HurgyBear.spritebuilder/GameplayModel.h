@@ -12,6 +12,7 @@
 @interface GameplayModel : NSObject
 
 @property (readonly)Word *currentWord;
+@property (readonly)NSArray *arrayOfCharacter;
 
 - (CCNode *)getNodeByTouchLocation:(CGPoint)touchLocation;
 - (void)processTouchLocation:(CGPoint)touchLocation;
