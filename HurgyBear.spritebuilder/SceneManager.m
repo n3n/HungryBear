@@ -12,7 +12,9 @@
 @implementation SceneManager
 
 + (CCScene *)loadScene:(NSString *)sceneName {
-    CCScene *gameScene = [CCBReader loadAsScene:sceneName];
+    CCScene *gameScene = (CCScene *)[CCBReader loadAsScene:sceneName];
+//    CCTransition *transition = [CCTransition transitionCrossFadeWithDuration:CCTransitionDirectionRight];
+//    [[CCDirector sharedDirector] replaceScene:gameScene withTransition:transition];
     [[CCDirector sharedDirector] replaceScene:gameScene];
     return gameScene;
 }
