@@ -39,6 +39,7 @@ const static NSInteger START_TIMER = 180;
     timeLabel.string = [[NSString alloc] initWithFormat:@"%d", time];
     scoreLabel.string = @"0";
     [self schedule:@selector(gameTimer) interval:1];
+    [self randomWord];
 }
 
 - (void)gameTimer {
@@ -114,9 +115,6 @@ const static NSInteger START_TIMER = 180;
     
 }
 
-
-
-
 - (void)move {
 //        CGSize location = [[CCDirector sharedDirector] viewSize];
 //        id move = [CCActionMoveTo actionWithDuration:2.4 position:CGPointMake(0, location.height/2)];
@@ -138,12 +136,15 @@ const static NSInteger START_TIMER = 180;
 
 - (void)skipButtonTapped {
     if (self.isPaused) return;
+    [self randomWord];
+}
+
+- (void)randomWord {
     [model skipWord];
-    Word *word = [model currentWord];
-    CCLOG(@"Skip is tapped. | Word: %@", word.vocabulary);
+    CCLOG(@"Skip is tapped. | Word: %@", model.currentWord.vocabulary);
     [self clearBlankSpace];
-    [self drawBlankSpace:(int)word.length];
-    
+    [self drawBlankSpace:(int)model.currentWord.length];
+    [self redrawWordImage];
 }
 
 - (void)soundButtonTapped {
@@ -186,8 +187,14 @@ const static NSInteger START_TIMER = 180;
     NSLog(@"Game Over");
 }
 
-- (void)drawWordImage {
-//    model.currentWord;
+- (void)redrawWordImage {
+    const CGPoint POS = CGPointMake(50.0, 302.0);
+    NSString *imagePath = [NSString stringWithFormat:@"GameUI/Animal/%@", model.currentWord.imagePath];
+    CCSprite *node = [CCSprite spriteWithImageNamed:imagePath];
+    node.anchorPoint = CGPointMake(0.5f, 0.5f);
+    node.position = ccp(POS.x , POS.y);
+    [blankSpaces addObject:node];
+    [self addChild:node];
 }
 
 - (void)drawBlankSpace:(int)length {
