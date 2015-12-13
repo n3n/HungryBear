@@ -36,21 +36,18 @@ const static NSInteger START_TIMER = 180;
 
 - (void)startGame {
     time = START_TIMER;
-    timeLabel.string = [[NSString alloc] initWithFormat:@"%d", time];
     scoreLabel.string = @"0";
     [self schedule:@selector(gameTimer) interval:1];
     [self randomWord];
 }
 
-- (void)gameTimer {
-    time -= 30;
+- (void)updateTime {
     timeLabel.string = [NSString stringWithFormat:@"%d", time];
+}
+
+- (void)gameTimer {
+    time -= 1;
     NSLog(@"Time: %d", time);
-    
-    if(time <= 0) {
-        NSLog(@"Timeout!");
-        [self gameOver];
-    }
 }
 
 - (void)setupData {
@@ -97,12 +94,14 @@ const static NSInteger START_TIMER = 180;
     plusTimeLabel.visible = YES;
     id fade = [self runActionFade];
     [plusTimeLabel runAction:fade];
+    time += 10;
 }
 
 - (void)minusTime {
     minusTimeLabel.visible = YES;
     id fade = [self runActionFade];
     [minusTimeLabel runAction:fade];
+    time -= 5;
 }
 
 - (id)runActionFade {
@@ -179,7 +178,11 @@ const static NSInteger START_TIMER = 180;
 }
 
 - (void)update:(CCTime)delta {
-    
+    if(time <= 0) {
+        NSLog(@"Timeout!");
+        [self gameOver];
+    }
+    [self updateTime];
 }
 
 - (void)gameOver {
@@ -189,7 +192,7 @@ const static NSInteger START_TIMER = 180;
 
 - (void)redrawWordImage {
     const CGPoint POS = CGPointMake(50.0, 302.0);
-    NSString *imagePath = [NSString stringWithFormat:@"GameUI/Animal/%@", model.currentWord.imagePath];
+    NSString *imagePath = [NSString stringWithFormat:@"GameUI/Vocabulary/%@", model.currentWord.imagePath];
     CCSprite *node = [CCSprite spriteWithImageNamed:imagePath];
     node.anchorPoint = CGPointMake(0.5f, 0.5f);
     node.position = ccp(POS.x , POS.y);
