@@ -209,7 +209,7 @@ const static NSInteger START_TIMER = 180;
 
 - (void)drawArrayOfCharacter {
     [self clearArrayOfCharacter];
-    const CGPoint POS = CGPointMake(104, 290.0);
+    const CGPoint POS = CGPointMake(105, 290.0);
     for(int i=0; i<model.arrayOfCharacter.count; i++){
         NSString *character = model.arrayOfCharacter[i];
         if([character isEqualToString:@"1"]) continue;
