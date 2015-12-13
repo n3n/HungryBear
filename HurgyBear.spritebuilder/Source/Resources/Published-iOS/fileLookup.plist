@@ -4,12 +4,20 @@
 <dict>
 	<key>filenames</key>
 	<dict>
+		<key>GameUI/Audios/BlinkCont.wav</key>
+		<string>GameUI/Audios/BlinkCont.m4a</string>
+		<key>GameUI/Audios/fishing-sound.wav</key>
+		<string>GameUI/Audios/fishing-sound.m4a</string>
 		<key>GameUI/Audios/gameOver2.wav</key>
 		<string>GameUI/Audios/gameOver2.m4a</string>
 		<key>GameUI/Audios/gamePlay.wav</key>
 		<string>GameUI/Audios/gamePlay.m4a</string>
 		<key>GameUI/Audios/menu.wav</key>
 		<string>GameUI/Audios/menu.m4a</string>
+		<key>GameUI/Audios/pop-sound.wav</key>
+		<string>GameUI/Audios/pop-sound.m4a</string>
+		<key>GameUI/Audios/wooden-button.wav</key>
+		<string>GameUI/Audios/wooden-button.m4a</string>
 	</dict>
 	<key>metadata</key>
 	<dict>

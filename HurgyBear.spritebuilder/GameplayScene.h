@@ -12,9 +12,13 @@
 @interface GameplayScene : Scene
 @property BOOL isPaused;
 @property int score;
+@property int time;
 
 - (void)drawArrayOfCharacter;
 - (void)clearArrayOfCharacter;
 - (void)randomWord;
+- (void)minusTime;
+- (void)plusTime;
+- (void)plusScore;
 
 @end

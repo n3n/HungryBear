@@ -14,6 +14,7 @@
 + (CCScene *)loadScene:(NSString *)sceneName {
     CCScene *gameScene = [CCBReader loadAsScene:sceneName];
     [[CCDirector sharedDirector] replaceScene:gameScene];
+    [[OALSimpleAudio sharedInstance] playEffect:@"GameUI/Audios/pop-sound.m4a"];
     return gameScene;
 }
 

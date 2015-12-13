@@ -53,18 +53,20 @@
 - (void)processTouchLocation:(CGPoint)touchLocation {
     
     Fish *node = (Fish *)[self getNodeByTouchLocation:touchLocation];
-    
-    if(!node) return;
-    if(![self hasAlphabet:node.alphabet]) return;
-    if([self alphabetIsOver:node.alphabet]) return;
-    
     CCLOG(@"Touch fished : [%@]", node.alphabet);
+    if(!node) return;
+    if(![self hasAlphabet:node.alphabet] || [self alphabetIsOver:node.alphabet]) {
+        [gameplayScene minusTime];
+        [gameplayScene removeChild:node];
+        [objectList removeObject:node];
+        return;
+    }
     
     NSString *alpha = [[NSString alloc] initWithString:node.alphabet];
     int index = [self getLastestIndex:alpha];
     arrayOfCharacter[index] = alpha.uppercaseString;
 
-    id sequence = [CCActionFadeIn actionWithDuration:1];
+    id sequence = [CCActionFadeOut actionWithDuration:1];
     
     [node runAction:sequence];
     
@@ -72,16 +74,17 @@
     [gameplayScene removeChild:node];
     [objectList removeObject:node];
     
-    gameplayScene.score += 25;
+    [gameplayScene plusScore];
     
     NSString * result = [[arrayOfCharacter valueForKey:@"description"] componentsJoinedByString:@""];
-    NSLog(@"%@ == %@", result, self.currentWord.vocabulary);
+//    NSLog(@"%@ == %@", result, self.currentWord.vocabulary);
     if([self.currentWord isCorrect:result]) {
         [gameplayScene randomWord];
     }
     [gameplayScene drawArrayOfCharacter];
     node = nil;
 }
+
 
 - (int)getLastestIndex:(NSString *)alpha {
     int index = -1;
@@ -132,19 +135,38 @@
 }
 
 - (CGPoint)randomPosition {
-    int x = arc4random() % 500;
-    int y = 45 + arc4random() % 190;
+    int x = 40 + arc4random() % 440;
+    int y = 70 + arc4random() % 140;
     return CGPointMake(x, y);
 }
 
 - (void)createNewFish:(NSString *)character {
-    Fish *fish = (Fish *)[CCBReader load:@"YellowFish"];
+    NSArray *fishType = @[@"YellowFish", @"BlueFish"];
+    int index = arc4random() % 2;
+    Fish *fish = (Fish *)[CCBReader load:fishType[index]];
     [fish configureWithAlphabet:character];
     fish.position = [self randomPosition];
-    [objectList addObject:fish];
-    [gameplayScene addChild:fish];
+    while (YES) {
+        BOOL isPassed = YES;
+        for (Fish *tmpFish in objectList) {
+            if( CGRectIntersectsRect(tmpFish.boundingBox, fish.boundingBox) ) {
+                fish.position = [self randomPosition];
+                isPassed = NO;
+                break;
+            }
+        }
+        if(isPassed) {
+            break;
+        }
+    }
+
     
-}
+    [objectList addObject:fish];
+    
+    
+    
+    [gameplayScene addChild:fish];
+    [fish runAction:[CCActionFadeIn actionWithDuration:0.5]];}
 
 - (void)clearFishes {
     for (Fish *fish in objectList) {
@@ -161,14 +183,22 @@
     return [self.currentWord.vocabulary.lowercaseString containsString:alpha.lowercaseString];
 }
 
+- (NSString *)getRandomCharAsNSString {
+    return [NSString stringWithFormat:@"%c", arc4random_uniform(26) + 'A'];
+}
+
 - (void)skipWord {
     [self clearFishes];
     currentIndex = arc4random_uniform((u_int32_t)wordList.count);
     arrayOfCharacter = [[NSMutableArray alloc] init];
+    
     for(int i=0; i<self.currentWord.length; i++) [arrayOfCharacter addObject:@"1"];
     
     for (NSString *character in self.currentWord.arrayOfCharacter) {
         [self createNewFish:character];
+    }
+    for (int i=0; i <5; i++) {
+        [self createNewFish:[self getRandomCharAsNSString]];
     }
 }
 

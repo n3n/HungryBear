@@ -20,16 +20,19 @@
 
 - (void)resumeButtonTapped {
     [self resumeGamePlayScene];
+    [[OALSimpleAudio sharedInstance] playEffect:@"GameUI/Audios/pop-sound.m4a"];
     CCLOG(@"Resume ButtonTapped");
 }
 
 - (void)restartButtonTapped {
     [SceneManager loadScene:@"Gameplay"];
+    [[OALSimpleAudio sharedInstance] playEffect:@"GameUI/Audios/pop-sound.m4a"];
     CCLOG(@"Restart ButtonTapped");
 }
 
 - (void)mainMenuButtonTapped {
     [SceneManager loadScene:@"MainScene"];
+    [[OALSimpleAudio sharedInstance] playEffect:@"GameUI/Audios/pop-sound.m4a"];
     CCLOG(@"Main Menu ButtonTapped");
     [OALSimpleAudio sharedInstance].effectsPaused = YES;
 }
@@ -42,7 +45,7 @@
     self.originalScene.isPaused = NO;
     self.originalScene.paused = NO;
     [self.originalScene removeChild:self];
-
+    [[OALSimpleAudio sharedInstance] playEffect:@"GameUI/Audios/pop-sound.m4a"];
 }
 
 - (void)configureWithDictionary:(GameplayScene *)originalScene {

@@ -35,6 +35,58 @@
 	<false/>
 	<key>nodeGraph</key>
 	<dict>
+		<key>animatedProperties</key>
+		<dict>
+			<key>0</key>
+			<dict>
+				<key>spriteFrame</key>
+				<dict>
+					<key>keyframes</key>
+					<array>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.0</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>GameUI/Fish Animation/FishYellowBig1.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+						<dict>
+							<key>easing</key>
+							<dict>
+								<key>type</key>
+								<integer>0</integer>
+							</dict>
+							<key>name</key>
+							<string>spriteFrame</string>
+							<key>time</key>
+							<real>0.3333333432674408</real>
+							<key>type</key>
+							<integer>7</integer>
+							<key>value</key>
+							<array>
+								<string>GameUI/Fish Animation/FishYellowBig2.png</string>
+								<string>Use regular file</string>
+							</array>
+						</dict>
+					</array>
+					<key>name</key>
+					<string>spriteFrame</string>
+					<key>type</key>
+					<integer>7</integer>
+				</dict>
+			</dict>
+		</dict>
 		<key>baseClass</key>
 		<string>CCSprite</string>
 		<key>children</key>
@@ -74,7 +126,7 @@
 									<key>name</key>
 									<string>visible</string>
 									<key>time</key>
-									<real>0.30000001192092896</real>
+									<real>0.3333333432674408</real>
 									<key>type</key>
 									<integer>1</integer>
 									<key>value</key>
@@ -96,6 +148,8 @@
 				<string></string>
 				<key>displayName</key>
 				<string>FishYellowBig1</string>
+				<key>hidden</key>
+				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -182,6 +236,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>opacity</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>color</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -190,7 +252,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -223,22 +285,7 @@
 									<key>name</key>
 									<string>visible</string>
 									<key>time</key>
-									<real>0.30000001192092896</real>
-									<key>type</key>
-									<integer>1</integer>
-									<key>value</key>
-									<true/>
-								</dict>
-								<dict>
-									<key>easing</key>
-									<dict>
-										<key>type</key>
-										<integer>0</integer>
-									</dict>
-									<key>name</key>
-									<string>visible</string>
-									<key>time</key>
-									<real>0.66666668653488159</real>
+									<real>0.3333333432674408</real>
 									<key>type</key>
 									<integer>1</integer>
 									<key>value</key>
@@ -260,6 +307,8 @@
 				<string></string>
 				<key>displayName</key>
 				<string>FishYellowBig2</string>
+				<key>hidden</key>
+				<true/>
 				<key>memberVarAssignmentName</key>
 				<string></string>
 				<key>memberVarAssignmentType</key>
@@ -346,6 +395,14 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>opacity</string>
+						<key>type</key>
+						<string>Float</string>
+						<key>value</key>
+						<real>0.0</real>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>color</string>
 						<key>type</key>
 						<string>Color3</string>
@@ -354,7 +411,7 @@
 							<real>1</real>
 							<real>1</real>
 							<real>1</real>
-							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -366,8 +423,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -401,8 +456,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.40841326117515564</real>
-							<real>0.47800686955451965</real>
+							<real>0.42603945732116699</real>
+							<real>0.59090906381607056</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -449,7 +504,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Helvetica</string>
+						<string>GameUI/Font/Back to School.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -458,7 +513,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>13</real>
+							<real>14</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -469,6 +524,19 @@
 						<string>Check</string>
 						<key>value</key>
 						<true/>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>0.0</real>
+							<real>1</real>
+						</array>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -634,6 +702,11 @@
 				</array>
 			</dict>
 			<dict>
+				<key>baseValue</key>
+				<array>
+					<string>GameUI/Fish Animation/FishYellowBig1.png</string>
+					<string>Use regular file</string>
+				</array>
 				<key>name</key>
 				<string>spriteFrame</string>
 				<key>type</key>
@@ -641,7 +714,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>GameUI/Fish Animation/FishYellowBig1.png</string>
+					<string>GameUI/Fish Animation/FishYellowBig2.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -652,16 +725,8 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>GameUI/Fishing/PlayGame/Assets/PlayGame_Fish_Yellow.png</string>
+					<string>GameUI/Fish Animation/FishYellowBig1.png</string>
 				</array>
-			</dict>
-			<dict>
-				<key>name</key>
-				<string>opacity</string>
-				<key>type</key>
-				<string>Float</string>
-				<key>value</key>
-				<real>0.0</real>
 			</dict>
 			<dict>
 				<key>name</key>
@@ -673,7 +738,7 @@
 					<real>1</real>
 					<real>1</real>
 					<real>1</real>
-					<real>0.0</real>
+					<real>1</real>
 				</array>
 			</dict>
 			<dict>
@@ -685,6 +750,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>seqExpanded</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>
@@ -740,7 +807,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.63333332538604736</real>
+			<real>0.53333336114883423</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

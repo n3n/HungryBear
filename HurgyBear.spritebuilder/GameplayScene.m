@@ -13,7 +13,7 @@
 #import "PauseScene.h"
 #import "Word.h"
 
-const static NSInteger START_TIMER = 180;
+const static NSInteger START_TIMER = 90;
 
 @implementation GameplayScene {
     GameplayModel *model;
@@ -24,9 +24,10 @@ const static NSInteger START_TIMER = 180;
     CCLabelTTF *scoreLabel;
     CCLabelTTF *minusTimeLabel;
     CCLabelTTF *plusTimeLabel;
+    CCLabelTTF *plusScoreLabel;
     NSMutableArray *blankSpaces;
     NSMutableArray *characterArray;
-    int time;
+    BOOL isMuted;
 }
 
 - (void)didLoadFromCCB {
@@ -44,18 +45,19 @@ const static NSInteger START_TIMER = 180;
 
 - (void)startGame {
     self.score = 0;
-    time = START_TIMER;
+    self.time = START_TIMER;
     scoreLabel.string = @"0";
     [self schedule:@selector(gameTimer) interval:1];
     [self randomWord];
 }
 
-- (void)updateTime {
-    timeLabel.string = [NSString stringWithFormat:@"%d", time];
+- (void)updateTime:(int)value {
+    self.time += value;
+    timeLabel.string = [NSString stringWithFormat:@"%d s", self.time];
 }
 
 - (void)gameTimer {
-    time -= 1;
+    [self updateTime:-1];
 }
 
 - (void)setupData {
@@ -67,6 +69,7 @@ const static NSInteger START_TIMER = 180;
 - (void)setupConfig {
     self.userInteractionEnabled = YES;
     self.isPaused = NO;
+    isMuted = NO;
 }
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
@@ -74,7 +77,6 @@ const static NSInteger START_TIMER = 180;
     
     CGPoint touchLocation = [self convertToNodeSpace:[touch locationInNode:self]];
     [model processTouchLocation:touchLocation];
-    
     [self touchForFishing:YES];
 
 //    [self wordCheck];
@@ -91,14 +93,21 @@ const static NSInteger START_TIMER = 180;
     plusTimeLabel.visible = YES;
     id fade = [self runActionFade];
     [plusTimeLabel runAction:fade];
-    time += 10;
+    [self updateTime:5];
 }
 
 - (void)minusTime {
     minusTimeLabel.visible = YES;
     id fade = [self runActionFade];
     [minusTimeLabel runAction:fade];
-    time -= 5;
+    [self updateTime:-5];
+}
+
+- (void)plusScore {
+    plusScoreLabel.visible = YES;
+    id fade = [self runActionFade];
+    [plusScoreLabel runAction:fade];
+    self.score += 25;
 }
 
 - (id)runActionFade {
@@ -137,6 +146,11 @@ const static NSInteger START_TIMER = 180;
 
 - (void)soundButtonTapped {
     if (self.isPaused) return;
+    
+    isMuted = !isMuted;
+    [OALSimpleAudio sharedInstance].muted = isMuted;
+    
+    
     CCLOG(@"Sound ButtonTapped!!");
 }
 
@@ -176,8 +190,12 @@ const static NSInteger START_TIMER = 180;
         [self gameOver];
     }
     [self updateScore];
-    [self updateTime];
-    
+    [self updateTime:0];
+    [self updateFish];
+}
+
+- (void)updateFish {
+
 }
 
 - (void)gameOver {
