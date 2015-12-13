@@ -34,6 +34,13 @@ const static NSInteger START_TIMER = 180;
     [self setupConfig];
     [self setupData];
     [self startGame];
+    
+    [[OALSimpleAudio sharedInstance] playEffect:@"GameUI/Audios/gamePlay.m4a"
+                                         volume:0.3
+                                          pitch:1.0
+                                            pan:0.0
+                                           loop:YES];
+    
 }
 
 - (void)startGame {
