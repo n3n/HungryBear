@@ -30,6 +30,7 @@ const static NSInteger START_TIMER = 180;
 }
 
 - (void)didLoadFromCCB {
+    [OALSimpleAudio sharedInstance].paused = YES;
     [self setupConfig];
     [self setupData];
     [self startGame];
