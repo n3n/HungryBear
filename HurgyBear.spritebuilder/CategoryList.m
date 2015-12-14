@@ -11,6 +11,7 @@
 
 @implementation CategoryList {
     NSArray<WordCategory *> *categoryList;
+    NSUserDefaults *userData;
 }
 
 + (instancetype)sharedInstance {
@@ -41,6 +42,8 @@
         [tmpCategoryList addObject:category];
     }
     categoryList = [[NSArray alloc] initWithArray:tmpCategoryList];
+    
+    userData = [NSUserDefaults standardUserDefaults];
 }
 
 - (NSArray<WordCategory *> *)categories {
@@ -58,6 +61,27 @@
         }
     }
     return nil;
+}
+
+- (int)loadScore:(NSString *)selectedCategory mode:(int)mode {
+    NSString *keyName = [NSString stringWithFormat:@"%@%d", selectedCategory, mode];
+    NSInteger score = [userData integerForKey:keyName];
+    NSLog(@"%@ = %ld", keyName, score);
+    return (int)score;
+}
+
+- (void)saveScore:(NSString *)selectedCategory mode:(int)mode score:(int)score {
+    NSString *keyName = [NSString stringWithFormat:@"%@%d", selectedCategory, mode];
+    [userData setInteger:score forKey:keyName];
+}
+
+- (NSArray *)loadScoreByMode:(int)mode {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for(WordCategory *category in categoryList) {
+        NSNumber *number = [NSNumber numberWithInt:[self loadScore:category.categoryName mode:mode]];
+        [array addObject:number];
+    }
+    return array;
 }
 
 @end

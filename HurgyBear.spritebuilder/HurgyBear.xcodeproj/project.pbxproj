@@ -14,6 +14,7 @@
 		077057781C1BD74D002D698B /* Word.m in Sources */ = {isa = PBXBuildFile; fileRef = 0770576F1C1BD74D002D698B /* Word.m */; };
 		077057791C1BD74D002D698B /* WordCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057711C1BD74D002D698B /* WordCategory.m */; };
 		0770577B1C1BD74D002D698B /* YellowFish.m in Sources */ = {isa = PBXBuildFile; fileRef = 077057751C1BD74D002D698B /* YellowFish.m */; };
+		077ACF721C1E188A0098E4E9 /* TimeoutScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 077ACF711C1E188A0098E4E9 /* TimeoutScene.m */; settings = {ASSET_TAGS = (); }; };
 		079575EB1C1C4570005E8583 /* wordlist.json in Resources */ = {isa = PBXBuildFile; fileRef = 079575EA1C1C4570005E8583 /* wordlist.json */; settings = {ASSET_TAGS = (); }; };
 		079575F61C1CB7E5005E8583 /* GameplayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 079575F51C1CB7E5005E8583 /* GameplayModel.m */; settings = {ASSET_TAGS = (); }; };
 		079D1BF51C1A9B980003575A /* SceneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 079D1BF41C1A9B980003575A /* SceneManager.m */; };
@@ -179,6 +180,8 @@
 		077057711C1BD74D002D698B /* WordCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCategory.m; sourceTree = "<group>"; };
 		077057741C1BD74D002D698B /* YellowFish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowFish.h; sourceTree = "<group>"; };
 		077057751C1BD74D002D698B /* YellowFish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowFish.m; sourceTree = "<group>"; };
+		077ACF701C1E188A0098E4E9 /* TimeoutScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeoutScene.h; sourceTree = "<group>"; };
+		077ACF711C1E188A0098E4E9 /* TimeoutScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeoutScene.m; sourceTree = "<group>"; };
 		079575EA1C1C4570005E8583 /* wordlist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wordlist.json; sourceTree = "<group>"; };
 		079575F41C1CB7E5005E8583 /* GameplayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameplayModel.h; sourceTree = "<group>"; };
 		079575F51C1CB7E5005E8583 /* GameplayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameplayModel.m; sourceTree = "<group>"; };
@@ -342,6 +345,8 @@
 				072174EF1C1B1709008086C5 /* Scene.m */,
 				0770575F1C1BD419002D698B /* PauseScene.h */,
 				077057601C1BD419002D698B /* PauseScene.m */,
+				077ACF701C1E188A0098E4E9 /* TimeoutScene.h */,
+				077ACF711C1E188A0098E4E9 /* TimeoutScene.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -945,6 +950,7 @@
 				079D1C021C1AA25E0003575A /* StampbookScene.m in Sources */,
 				079D1C0E1C1ABDE90003575A /* CategoriesScene.m in Sources */,
 				077057611C1BD419002D698B /* PauseScene.m in Sources */,
+				077ACF721C1E188A0098E4E9 /* TimeoutScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				079D1BFF1C1AA2470003575A /* HighscoreScene.m in Sources */,
 				079D1C0B1C1ABC830003575A /* ModeScene.m in Sources */,

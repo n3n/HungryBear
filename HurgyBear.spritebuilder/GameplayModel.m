@@ -53,8 +53,9 @@
 - (void)processTouchLocation:(CGPoint)touchLocation {
     
     Fish *node = (Fish *)[self getNodeByTouchLocation:touchLocation];
-    CCLOG(@"Touch fished : [%@]", node.alphabet);
+//    CCLOG(@"Touch fished : [%@]", node.alphabet);
     if(!node) return;
+    [[OALSimpleAudio sharedInstance] playEffect:@"GameUI/Audios/fishing-sound.m4a"];
     if(![self hasAlphabet:node.alphabet] || [self alphabetIsOver:node.alphabet]) {
         [gameplayScene minusTime];
         [gameplayScene removeChild:node];
@@ -64,12 +65,17 @@
     
     NSString *alpha = [[NSString alloc] initWithString:node.alphabet];
     int index = [self getLastestIndex:alpha];
+    if(index == -1) {
+        [gameplayScene removeChild:node];
+        [objectList removeObject:node];
+        return;
+    }
     arrayOfCharacter[index] = alpha.uppercaseString;
 
     id sequence = [CCActionFadeOut actionWithDuration:1];
     
     [node runAction:sequence];
-    
+
     
     [gameplayScene removeChild:node];
     [objectList removeObject:node];
@@ -116,10 +122,9 @@
 }
 
 - (NSInteger)countAlphabetOfArray:(NSArray *)array alphabet:(NSString *)alpha {
-    NSInteger count = 0;
-    for (int i=0; i<array.count; i++) {
-        NSString *alphaInArray = (NSString *)array[i];
-        if([alphaInArray.lowercaseString isEqualToString:alpha.lowercaseString]) {
+    int count = 0;
+    for (NSString *string in array) {
+        if([string.lowercaseString isEqualToString:alpha.lowercaseString]) {
             count++;
         }
     }

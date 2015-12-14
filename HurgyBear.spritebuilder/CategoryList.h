@@ -15,9 +15,12 @@
 @property (readonly)NSUInteger count;
 - (WordCategory *)categoryAtIndex:(NSInteger)index;
 - (WordCategory *)categoryByCategoryName:(NSString *)categoryName;
+- (int)loadScore:(NSString *)selectedCategory mode:(int)mode;
+- (void)saveScore:(NSString *)selectedCategory mode:(int)mode score:(int)score;
 
 @property NSInteger mode;
 @property (copy, nonatomic)NSString *selectedCategory;
+
 
 // Initialize Method
 - (instancetype)initWithDefaultData;

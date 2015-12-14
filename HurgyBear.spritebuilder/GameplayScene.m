@@ -12,6 +12,7 @@
 #import "YellowFish.h"
 #import "PauseScene.h"
 #import "Word.h"
+#import "TimeoutScene.h"
 
 const static NSInteger START_TIMER = 90;
 
@@ -25,9 +26,11 @@ const static NSInteger START_TIMER = 90;
     CCLabelTTF *minusTimeLabel;
     CCLabelTTF *plusTimeLabel;
     CCLabelTTF *plusScoreLabel;
+    CCLabelTTF *minusScoreForSkip;
     NSMutableArray *blankSpaces;
     NSMutableArray *characterArray;
     BOOL isMuted;
+    BOOL isGameEnd;
 }
 
 - (void)didLoadFromCCB {
@@ -41,6 +44,8 @@ const static NSInteger START_TIMER = 90;
                                           pitch:1.0
                                             pan:0.0
                                            loop:YES];
+
+    
 }
 
 - (void)startGame {
@@ -54,6 +59,9 @@ const static NSInteger START_TIMER = 90;
 - (void)updateTime:(int)value {
     self.time += value;
     timeLabel.string = [NSString stringWithFormat:@"%d s", self.time];
+    if (self.time <= 15) {
+        timeLabel.color = [CCColor colorWithRed:255 green:0 blue:0];
+    }
 }
 
 - (void)gameTimer {
@@ -70,6 +78,7 @@ const static NSInteger START_TIMER = 90;
     self.userInteractionEnabled = YES;
     self.isPaused = NO;
     isMuted = NO;
+    isGameEnd = NO;
 }
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event {
@@ -135,6 +144,16 @@ const static NSInteger START_TIMER = 90;
 - (void)skipButtonTapped {
     if (self.isPaused) return;
     [self randomWord];
+    [self minusScoreForSkip];
+    
+    
+}
+
+- (void)minusScoreForSkip {
+    minusScoreForSkip.visible = YES;
+    id fade = [self runActionFade];
+    [minusScoreForSkip runAction:fade];
+    [self updateTime:-3];
 }
 
 - (void)randomWord {
@@ -142,6 +161,7 @@ const static NSInteger START_TIMER = 90;
     [self clearArrayOfCharacter];
     [self drawBlankSpace:(int)model.currentWord.length];
     [self redrawWordImage];
+    
 }
 
 - (void)soundButtonTapped {
@@ -185,10 +205,15 @@ const static NSInteger START_TIMER = 90;
 }
 
 - (void)update:(CCTime)delta {
-    if(time <= 0) {
+    if(self.time <= 0) {
         NSLog(@"Timeout!");
-        [self gameOver];
+        if(!isGameEnd) {
+            [self gameOver];
+        }
+        isGameEnd = YES;
+        
     }
+
     [self updateScore];
     [self updateTime:0];
     [self updateFish];
@@ -200,7 +225,21 @@ const static NSInteger START_TIMER = 90;
 
 - (void)gameOver {
     [self unscheduleAllSelectors];
+    [self popTimeoutScene];
+    [self pauseAll];
     NSLog(@"Game Over");
+}
+
+- (void)popTimeoutScene {
+    TimeoutScene *timeoutScene = (TimeoutScene *)[CCBReader load:@"Timeout"];
+    [timeoutScene score:self.score];
+    [self addChild:timeoutScene];
+}
+
+- (void)pauseAll {
+    [self pauseGamePlayScene];
+    [[OALSimpleAudio sharedInstance] stopEverything];
+//    [[CCDirector sharedDirector] pause];
 }
 
 - (void)redrawWordImage {
